@@ -16,7 +16,7 @@
 ## 통계
 * [메인통계](http://flato.kr/work/5rc/s201.html)
 * [근무현황통계](http://flato.kr/work/5rc/s202.html)
-- [보기](http://flato.kr/work/5rc/s202-view.html)
+           - [보기](http://flato.kr/work/5rc/s202-view.html)
 * [업무보고통계](http://flato.kr/work/5rc/s203.html)
 * [월별현황](http://flato.kr/work/5rc/s204.html)
 * [지역별현황](http://flato.kr/work/5rc/s205.html)
