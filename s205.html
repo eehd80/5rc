@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head w3-include-html="head.html">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>환경부 환경지킴이 복무관리시스템</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <link rel="stylesheet" href="./dist/vendor/bootstrap/css/bootstrap.min.css"><!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="./dist/vendor/font-awesome/css/font-awesome.min.css"><!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="./dist/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+  <link rel="stylesheet" href="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css"><!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="./dist/vendor/fancybox/jquery.fancybox.min.css"> <!-- 사진보기 -->
+  <link rel="stylesheet" href="./dist/css/style.css" id="theme-stylesheet">
+  <link rel="stylesheet" href="./dist/css/comm.css">
+  <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <div id="skipnavigation">
+      <a href="#gnb"><span>주메뉴 바로가기</span></a>
+      <a href="#main"><span>본문 바로가기</span></a>
+    </div>
+    <!-- header -->
+    <header class="header" include-html="./layer/header.html"></header>
+  
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center">
+            <h2 class="h5">맥스관리자</h2>
+
+            <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+              <!-- Log out-->
+              <li class="nav-item">
+                <a href="#" class="nav-link logout"> 비밀번호 변경 </a>
+              </li>
+              <li class="nav-item"><a href="login.html" class="nav-link logout"> 로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+            <h5 class="blind">주메뉴</h5>
+            <ul id="side-main-menu" class="side-menu list-unstyled">
+              <li>
+                <a href="#s1Dropdown" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-eye"></i>지킴이 활동 </a>
+                <ul id="s1Dropdown" class="collapse list-unstyled ">
+                  <li><a href="s101.html">공지사항</a></li>
+                  <li><a href="s102.html">출퇴근</a></li>
+                  <li><a href="s103.html">업무보고</a></li>
+                  <li><a href="s104.html" onclick="window.open(this.href, '_blank', 'toolbars=no,scrollbars=no'); return false;">지킴이 위치</a></li>
+                  <li><a href="s105.html">보고 및 승인</a></li>
+                  <li><a href="s106.html">복무지역 이탈현황</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#s2Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>통계</a>
+                <ul id="s2Dropdown" class="collapse list-unstyled show ">
+                  <li><a href="s201.html">메인통계</a></li>
+                  <li><a href="s202.html">근무현황통계</a></li>
+                  <li><a href="s203.html">업무보고통계</a></li>
+                  <li><a href="s204.html">월별현황</a></li>
+                  <li class="on"><a href="s205.html">지역별현황</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#s3Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리
+                </a>
+                <ul id="s3Dropdown" class="collapse list-unstyled ">
+                  <li><a href="s301.html">관리자</a></li>
+                  <li><a href="s302.html">지킴이</a></li>
+                  <li><a href="s303.html">사용자별 권한관리</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#s4Dropdown" aria-expanded="false" data-toggle="collapse" > <i class="fa fa-cog"></i>설정관리 </a>
+                <ul id="s4Dropdown" class="collapse list-unstyled ">
+                  <li><a href="s401.html">관리관청</a></li>
+                  <li><a href="s402.html">관리강</a></li>
+                  <li><a href="s403.html">관리지역</a></li>
+                  <li><a href="s404.html">근무구간</a></li>
+                  <li><a href="s405.html">복무지역</a></li>
+                  <li><a href="s406.html">휴가설정</a></li>
+                </ul>
+              </li>
+              <li><a href="#s5Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-sliders"></i>시스템설정</a>
+                <ul id="s5Dropdown" class="collapse list-unstyled ">
+                  <li><a href="s501.html">메뉴등록</a></li>
+                  <li><a href="s502.html">권한등록</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+  <div id="main" class="page">
+    
+    <section>
+      <div class="container-fluid">
+        <!-- Page Header-->
+        <header class="header-col">
+          <h2 class="tit-g">지역별 현황</h2>
+          <div class="area-btn">
+            <a href="#" class="btn- btn-green"><i class="fa fa-file-excel-o"></i> 엑셀</a>
+          </div>
+        </header>
+        <div class="contents">
+            <d class="table-responsive">
+
+              <div class="tbl-header clear-g">
+
+                <form class="form-inline" id="noticeList" name="noticeList">
+  
+                  <div class="input-datepicker">
+                    <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="지킴이위치 보고 일자">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+  
+                  <div class="c-select">
+                    <label for="control" class="blind">관할청</label>
+                    <select id="control" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+                      <option data-tokens="">관할청</option>
+                      <option data-tokens="">환경부</option>
+                      <option data-tokens="">한강유역환경청</option>
+                      <option data-tokens="">금강유역환경청</option>
+                    </select>
+                  </div>
+                  <div class="c-select">
+                    <label for="commute" class="blind">지킴이상태</label>
+                    <select id="commute" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+                      <option data-tokens="">지킴이상태</option>
+                      <option data-tokens="">출근</option>
+                      <option data-tokens="">퇴근</option>
+                    </select>
+                  </div>
+                  <div class="c-select">
+                    <label for="areaReport" class="blind">보고지역</label>
+                    <select id="areaReport" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+                      <option data-tokens="전체">보고지역 - 전체</option>
+                    </select>
+                  </div>
+  
+                  <div class="input-box">
+                    <input type="text" id="searchKey" name="searchKey" maxlength="20" placeholder="검색어를 입력해주세요."
+                      title="검색어" class="int">
+                      <i class="fa fa-times-circle form-control-clear hidden"></i>
+                    </div>
+                    <a href="javascript:;" class="btn- btn-search" maxlength="10" id="btnSearch" name="btnSearch">검색</a>
+                </form>
+  
+              </div>
+
+              <div class="contents-col2" style="height: 70vh;">
+                  <dlv class="col-left">
+                          <!-- table -->
+                        <div class=" tbl-scroll-wrap h100">
+                              <div class="tbl-original mCustomScrollbar">
+                                <table class="tbl-g table">
+                                  <caption>보고항목, 강이름, 지역이름, 보고횟수 목록입니다.</caption>
+                                  <colgroup>
+                                      <col width="25%" span="4">
+                                  </colgroup>
+                                  <thead>
+                                      <tr>
+                                          <th scope="col">보고항목</th>
+                                          <th scope="col">강이름</th>
+                                          <th scope="col">지역이름</th>
+                                          <th scope="col">보고횟수</th>
+                                      </tr>
+                                  </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>불법어로</td>
+                                        <td>한강</td>
+                                        <td>남한강1</td>
+                                        <td>보고횟수</td>
+                                    </tr>
+                                    <tr>
+                                        <td>불법어로</td>
+                                        <td>한강</td>
+                                        <td>남한강1</td>
+                                        <td>보고횟수</td>
+                                    </tr>
+                                    <tr>
+                                        <td>불법어로</td>
+                                        <td>한강</td>
+                                        <td>남한강1</td>
+                                        <td>보고횟수</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                </table>
+                          </div>
+                        </div>
+                        <!-- //table -->
+
+                  </dlv>
+                  
+                  <div class="col-right">
+                      <!-- 지도 -->
+                      <div class="area-map">
+                        <img src="./images/map.png" alt="인천 강화군 하점면 고려산로 89-12">
+
+                        <div class="zon-number" style="top: 20%;left: 20%;">
+                          <em>중구</em>
+                          <span>101</span>
+                        </div>
+                        <div class="zon-number" style="top: 40%;left: 20%;">
+                          <em>용산구</em>
+                          <span>101</span>
+                        </div>
+                        <div class="zon-number" style="top: 20%;left: 80%;">
+                          <em>서대문구</em>
+                          <span>101</span>
+                        </div>
+                        <div class="zon-number" style="top: 80%;left: 20%;">
+                          <em>중구</em>
+                          <span>101</span>
+                        </div>
+
+
+                      </div>
+                    <!-- //지도 -->
+                    </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript files-->
+  <script src="./dist/vendor/jquery/jquery.min.js"></script>
+  <script src="./dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+  <script src="./dist/vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./dist/vendor/summernote/summernote-bs4.min.js"></script> <!-- Summernote-->
+  <script src="./dist/js/include.js"></script>
+  <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"> </script> <!-- MultiSelect -->
+  <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.kr.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script src="./dist/vendor/fancybox/jquery.fancybox.min.js"></script> <!-- fancy gallery -->
+  <script src="./dist/js/front.js"></script>  <!-- Main File-->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</body>
+</html>

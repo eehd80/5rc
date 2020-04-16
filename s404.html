@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+
+<head w3-include-html="head.html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>환경부 환경지킴이 복무관리시스템</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="./dist/vendor/bootstrap/css/bootstrap.min.css"><!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="./dist/vendor/font-awesome/css/font-awesome.min.css"><!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="./dist/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="./dist/vendor/fancybox/jquery.fancybox.min.css"> <!-- 사진보기 -->
+    <link rel="stylesheet" href="./dist/css/style.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="./dist/css/comm.css">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
+
+<body>
+        <div id="skipnavigation">
+            <a href="#gnb"><span>주메뉴 바로가기</span></a>
+            <a href="#main"><span>본문 바로가기</span></a>
+        </div>
+        <!-- header -->
+        <header class="header" include-html="./layer/header.html"></header>
+      
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            <div class="side-navbar-wrapper">
+                <!-- Sidebar Header    -->
+                <div class="sidenav-header d-flex align-items-center justify-content-center">
+                    <!-- User Info-->
+                    <div class="sidenav-header-inner text-center">
+                        <h2 class="h5">맥스관리자</h2>
+
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <!-- Log out-->
+                            <li class="nav-item">
+                                <a href="#" class="nav-link logout"> 비밀번호 변경 </a>
+                            </li>
+                            <li class="nav-item"><a href="login.html" class="nav-link logout"> 로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar Navigation Menus-->
+                <div class="main-menu">
+                    <h5 class="blind">주메뉴</h5>
+                    <ul id="side-main-menu" class="side-menu list-unstyled">
+                        <li>
+                            <a href="#s1Dropdown" aria-expanded="false" data-toggle="collapse">
+                                <i class="fa fa-eye"></i>지킴이 활동 </a>
+                            <ul id="s1Dropdown" class="collapse list-unstyled ">
+                                <li><a href="s101.html">공지사항</a></li>
+                                <li><a href="s102.html">출퇴근</a></li>
+                                <li><a href="s103.html">업무보고</a></li>
+                                <li><a href="s104.html" onclick="window.open(this.href, '_blank', 'toolbars=no,scrollbars=no'); return false;">지킴이 위치</a></li>
+                                <li><a href="s105.html">보고 및 승인</a></li>
+                                <li><a href="s106.html">복무지역 이탈현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#s2Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>통계</a>
+                            <ul id="s2Dropdown" class="collapse list-unstyled ">
+                                <li><a href="s201.html">메인통계</a></li>
+                                <li><a href="s202.html">근무현황통계</a></li>
+                                <li><a href="s203.html">업무보고통계</a></li>
+                                <li><a href="s204.html">월별현황</a></li>
+                                <li><a href="s205.html">지역별현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#s3Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리
+                            </a>
+                            <ul id="s3Dropdown" class="collapse list-unstyled ">
+                                <li><a href="s301.html">관리자</a></li>
+                                <li><a href="s302.html">지킴이</a></li>
+                                <li><a href="s303.html">사용자별 권한관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#s4Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-cog"></i>설정관리 </a>
+                            <ul id="s4Dropdown" class="collapse list-unstyled show">
+                                <li><a href="s401.html">관리관청</a></li>
+                                <li><a href="s402.html">관리강</a></li>
+                                <li><a href="s403.html">관리지역</a></li>
+                                <li class="on"><a href="s404.html">근무구간</a></li>
+                                <li><a href="s405.html">복무지역</a></li>
+                                <li><a href="s406.html">휴가설정</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#s5Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-sliders"></i>시스템설정</a>
+                            <ul id="s5Dropdown" class="collapse list-unstyled ">
+                                <li><a href="s501.html">메뉴등록</a></li>
+                                <li><a href="s502.html">권한등록</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div id="main" class="page">
+
+        <section>
+            <div class="container-fluid">
+                <!-- Page Header-->
+                <header class="header-col">
+                    <h2 class="tit-g">근무구간</h2>
+                    <div class="area-btn">
+                        <a href="#" class="btn- btn-blue ml-a"><i class="fa fa-pencil"></i> 신규</a>
+                        <a href="#" class="btn- btn-red"><i class="fa fa-close"></i> 삭제</a>
+                        <a href="#" class="btn- btn-green"><i class="fa fa-file-excel-o"></i> 엑셀</a>
+                    </div>
+                </header>
+                <div class="contents">
+                    <d class="table-responsive">
+
+                        <div class="tbl-header clear-g">
+
+                            <form class="form-inline" id="noticeList" name="noticeList">
+
+                                <div class="c-select">
+                                    <label for="control" class="blind">관할청</label>
+                                    <select id="control" name="searchType" class="sel-" data-live-search="true"
+                                        data-width="fit">
+                                        <option data-tokens="">관할청</option>
+                                        <option data-tokens="">환경부</option>
+                                        <option data-tokens="">한강유역환경청</option>
+                                        <option data-tokens="">금강유역환경청</option>
+                                    </select>
+                                </div>
+                                <div class="c-select">
+                                    <label for="searchType" class="blind">복무지역</label>
+                                    <select id="searchType" name="searchType" class="sel-" data-live-search="true"
+                                        data-width="fit">
+                                        <option data-tokens="">복무지역</option>
+                                        <option data-tokens="">서울</option>
+                                        <option data-tokens="">경기</option>
+                                        <option data-tokens="">인천</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-box">
+                                    <input type="text" id="searchKey" name="searchKey" maxlength="20"
+                                        placeholder="검색어를 입력해주세요." title="검색어" class="int">
+                                    <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                </div>
+                                <a href="javascript:;" class="btn- btn-search" maxlength="10" id="btnSearch"
+                                    name="btnSearch">검색</a>
+                            </form>
+
+                        </div>
+
+                        <div class="contents-col2" style="height: 56vh;">
+                            <dlv class="col-left bg-card">
+                                <!-- table -->
+                                <div class=" tbl-scroll-wrap " style="height: 100%;">
+                                    <div class="tbl-original mCustomScrollbar">
+                                        <table class="tbl-g table">
+                                            <caption>번호, 이름, 관할지역, 이탈건수, 이동거리 목록입니다.</caption>
+                                            <colgroup>
+                                                <col width="5%">
+                                                <col width="11%">
+                                                <col width="30%">
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"><input id="option" type="checkbox" value=""></th>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">북부지역명</th>
+                                                    <th scope="col">근무지역명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="option" type="checkbox" value=""></td>
+                                                    <td>1</td>
+                                                    <td>동북권역 조만강</td>
+                                                    <td><span class="ell">조만강-1지점-1차</span></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- //table -->
+
+                            </dlv>
+
+                            <div class="col-right bg-card">
+                                <!-- 지도 -->
+                                <div class="area-map">
+                                    <img src="./images/map.png" alt="인천 강화군 하점면 고려산로 89-12">
+
+                                    <div class="point-map" style="bottom:40%;right: 330px;">
+                                        <i class="i- i-pos">지킴이 위치 표시</i>
+                                    </div>
+
+                                    <div class="point-map" style="bottom:40%;right: 60%;">
+                                        <p class="show">이름 : 강경희 <br>
+                                            소속 : 낙동강유역한경청 <br>
+                                            관할지역 : (낙동강 하류) 서부권역 본류 1-3 <br>
+                                            단말기번호 : 101-42-6-2598 <br>
+                                            현재위치 : 경남 합천군 청덕면 <br>
+                                            보고시간 : 2020-04-10 17:04:13
+                                        </p>
+                                        <i class="i- i-pos-sel">선택 지킴이 위치 표시</i>
+                                    </div>
+
+                                    <div class="point-map" style="bottom:70%;right: 20%">
+                                        <i class="i- i-work">지킴이 업무보고 표시</i>
+                                    </div>
+
+                                    <div class="point-map" style="bottom:20%;right: 10%;">
+                                        <p class="show">
+                                            현재위치 : 경남 의령군 낙서면 <br>
+                                            단말상태 : 정상 <br>
+                                            보고시간 : 2020-04-10 17:04:13 <br>
+                                            보고내용 : 순찬 (보고 아이콘일 때)
+                                        </p>
+                                        <i class="i- i-stopover">근무지(경유지) 표시</i>
+                                    </div>
+                                </div>
+                                <!-- //지도 -->
+
+                                <!-- 지도 icon -->
+                                <div class="area-icon">
+                                    <span class="ico-map">
+                                        <i class="i- i-pos">지킴이 위치 표시</i> 위치보고
+                                    </span>
+                                    <span class="ico-map">
+                                        <i class="i- i-work">지킴이 업무보고 표시</i> 업무보고
+                                    </span>
+                                    <span class="ico-map">
+                                        <i class="i- i-stopover">근무지(경유지) 표시</i> 경유지
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 하단 설정 -->
+                        <div class="contents-col2 et1 bg-card mt-3">
+                            <dl class="area-setting">
+                                <dt>관할청</dt>
+                                <dd>
+                                    <select id="searchType" name="searchType" class="sel-" data-live-search="true">
+                                        <option selected="selected" value="1">환경부</option>
+                                        <option value="2">한강유역환경청</option>
+                                        <option value="3">금강유역환경청</option>
+                                        <option value="4">낙동강유역환경청</option>
+                                        <option value="5">영산강유역환경청</option>
+                                        <option value="6">대구지방환경청</option>
+                                    </select>
+                                </dd>
+                                <dt>관리강</dt>
+                                <dd>
+                                    <select id="searchType" name="searchType" class="sel-" data-live-search="true">
+                                        <option selected="selected" value="0">전체</option>
+                                        <option value="1">한강</option>
+                                        <option value="2">금강</option>
+                                        <option value="3">낙동강 하류</option>
+                                        <option value="4">영산강</option>
+                                        <option value="5">섬진강</option>
+                                        <option value="6">낙동강 중류</option>
+                                        <option value="7">낙동강 상류</option>
+                                        <option value="9">용담호</option>
+                                        <option value="10">섬진강(전북)</option>
+                                        <option value="11">북한강(원주)</option>
+                                        <option value="12">남한강(원주)</option>
+                                        <option value="13">동해안(원주)</option>
+                                        <option value="14">댐상류(원주)</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl class="area-setting">
+                                <dt>복무지역명</dt>
+                                <dd>
+                                    <select id="searchType1" name="searchType1" class="sel-" data-live-search="true">
+                                        <option value="145">01 상류①(장수1, 최성엽) 금본1(발원지-장수/진안)</option>
+                                        <option value="144">02 상류②(장수2, 이봉열) 장계천</option>
+                                        <option value="143">03 상류③(진안1, 김순천) 금본2(장수/진안-용담호)</option>
+                                        <option value="142">04 상류④(진안2, 백용선) 금본3(용담호-용담댐)</option>
+                                        <option value="141">05 상류⑤(무주1, 박래문) 금본4(용담댐-무주/금산)</option>
+                                        <option value="140">06 상류⑥(무주2, 이상철) 남대천</option>
+                                        <option value="139">07 상류⑦(금산, 김현섭) 금본5(무주/금산-금산/영동)</option>
+                                        <option value="137">08 상류⑧(영동1, 권유성) 금본6(금산/영동-영동/옥천)</option>
+                                        <option value="138">09 상류⑨(영동2, 윤병익) 초강천</option>
+                                        <option value="150">10 대청①(옥천1, 조기현) 금본7(영동/금산-안내천 합류점)</option>
+                                        <option value="428">10안동</option>
+                                        <option value="146">11 대청②(옥천2, 안상옥) 보청천4</option>
+                                        <option value="429">11청송.영양.임하댐</option>
+                                        <option value="147">12 대청③(옥천3, 장숙희) 금본8(보청천합류점-안내천합류점(장계교))</option>
+                                        <option value="430">12청송.영양.임하댐</option>
+                                        <option value="134">13 대청④(옥천4, 이흥배) 금본9(안내천합류-옥천/보은)</option>
+                                        <option value="431">13청송.영양.임하댐</option>
+                                        <option value="153">14 대청⑤(보은1, 구자영) 보청천3(오덕천합류-보은/옥천)</option>
+                                        <option value="432">14안동</option>
+                                        <option value="152">15 대청⑥(보은2, 방한일) 보청천2(종곡천합류-오덕천합류)</option>
+                                        <option value="433">15문경.예천</option>
+                                        <option value="154">16 대청⑦(보은3, 김원진) 보청천1(발원지-종곡천합류)</option>
+                                        <option value="434">16문경.예천</option>
+                                        <option value="151">17 대청⑧(보은4, 김숙환) 금본10(옥천/보은-보은/청원)</option>
+                                        <option value="435">17문경.예천</option>
+                                        <option value="157">18 대청⑨(청주1, 안태성) 미호천3(보강천합류-무심천합류)</option>
+                                        <option value="436">18상주</option>
+                                        <option value="156">19 대청⑩(청주2, 전숙자) 미호천4(무심천합류-청원/연기)</option>
+                                        <option value="437">19상주</option>
+                                        <option value="419">1태백.봉화</option>
+                                        <option value="155">20 대청⑪(청주3, 이창호) 금본11(보은/청원-청원/연기)</option>
+                                        <option value="438">20구미</option>
+                                        <option value="160">21 세종①(진천1, 황금숙) 미호천1(발원지-한천합류)</option>
+                                        <option value="439">21구미</option>
+                                        <option value="161">22 세종②(진천2, 임한빈) 미호천2(한천합류-보강천 합류)</option>
+                                        <option value="440">22의성</option>
+                                        <option value="159">23 세종③(증평, 강전일) 보강천(발원지-미호천합류)</option>
+                                        <option value="441">23의성</option>
+                                        <option value="163">24 세종④(청주, 김문환) 무심천(발원지-미호천합류)</option>
+                                        <option value="442">24김천</option>
+                                        <option value="162">25 세종⑤(천안, 이영옥) 병천천(발원지-천안/청원)</option>
+                                        <option value="443">25구미</option>
+                                        <option value="164">26 세종⑥(연기1, 황규용) 미호천5(청원/연기-월하천합류)</option>
+                                        <option value="444">26구미</option>
+                                        <option value="165">27 세종⑦(연기2, 홍광의) 금본12(청원/연기-연기/공주 )</option>
+                                        <option value="445">27칠곡.성주</option>
+                                        <option value="168">28 세종⑧(대전1, 홍광의) 유등천, 대전천</option>
+                                        <option value="446">28칠곡.성주</option>
+                                        <option value="135">29 세종⑨(대전2, 이양희) 갑천(발원지-탑립동)</option>
+                                        <option value="447">29대구.다사</option>
+                                        <option value="420">2태백.봉화</option>
+                                        <option value="166">30 세종⑩(대전3, 김용만) 금본13(대청댐-대전/연기(좌안))</option>
+                                        <option value="455">30대구.다사</option>
+                                        <option value="167">31 하류①(공주1, 이희선) 금본14(연기/공주-정안천합류)</option>
+                                        <option value="448">31금호강 하류</option>
+                                        <option value="172">32 하류②(공주2, 임재건) 금본15(정안천합류-공주/부여)</option>
+                                        <option value="449">32금호강 하류</option>
+                                        <option value="176">33 하류③(청양, 이영택) 금본16(공주/청양-청양/부여)</option>
+                                        <option value="450">33금호강 상류</option>
+                                        <option value="174">34 하류④(부여1, 임왕상) 금본17(청양/부여-부여/논산(좌안))</option>
+                                        <option value="451">34금호강 상류</option>
+                                        <option value="173">35 하류⑤(부여2, 윤상기) 금본18(청양/부여-황산대교(우안))</option>
+                                        <option value="452">35금호강 상류</option>
+                                        <option value="171">36 하류⑥(논산1, 최기영) 논산천(발원지-노성천합류)</option>
+                                        <option value="453">36고령.달성</option>
+                                        <option value="175">37 하류⑦(논산2, 윤향섭) 금본19(부여/논산-황산대교(좌안))</option>
+                                        <option value="454">37고령.달성</option>
+                                        <option value="133">38 하류⑧(익산, 김동렬) 금본20(황산대교-웅포대교)</option>
+                                        <option value="136">39 하류⑨(서천1, 김효수) 금본21(웅포대교-하구언)</option>
+                                        <option value="421">3태백.봉화</option>
+                                        <option value="177">40 하류⑩(서천2, 김명수) 길산천,금강본류</option>
+                                        <option value="422">4태백.봉화</option>
+                                        <option value="423">5태백.봉화</option>
+                                        <option value="424">6태백.봉화</option>
+                                        <option value="425">7안동댐 상류</option>
+                                        <option value="426">8안동댐 상류</option>
+                                        <option value="427">9안동</option>
+                                        <option value="788">강릉1</option>
+                                        <option value="789">강릉2</option>
+                                        <option value="546">경안천 1</option>
+                                        <option value="547">경안천 2</option>
+                                        <option value="548">경안천 3</option>
+                                        <option value="755">경안천 4</option>
+                                        <option value="123">경안천1</option>
+                                        <option value="124">경안천2</option>
+                                        <option value="125">경안천3</option>
+                                        <option value="232">경안천4</option>
+                                        <option value="192">고령, 달성</option>
+                                        <option value="73">고령.달성</option>
+                                        <option value="785">고성1</option>
+                                        <option value="269">곡성 송정리 ~ 곡성 연화리</option>
+                                        <option value="243">곡성 옥과면 ~ 남원 주생면</option>
+                                        <option value="246">곡성 죽곡면 ~ 순천 황전면</option>
+                                        <option value="111">곡성구간1</option>
+                                        <option value="113">곡성구간2</option>
+                                        <option value="800">광동댐1</option>
+                                        <option value="270">광양 진월면 ~ 하동 갈사리</option>
+                                        <option value="120">광양구간1</option>
+                                        <option value="121">광양구간2</option>
+                                        <option value="253">광주 선암동 ~ 나주 금천면</option>
+                                        <option value="237">광주 송산 ~ 장성 황룡면</option>
+                                        <option value="252">광주 신가동 ~ 광주 서창동</option>
+                                        <option value="238">광주 유촌동 ~ 광주 용전동</option>
+                                        <option value="87">광주구간1</option>
+                                        <option value="88">광주구간2</option>
+                                        <option value="212">광주구간3</option>
+                                        <option value="222">광주구간4</option>
+                                        <option value="263">구례 마산면 ~ 하동 화개면</option>
+                                        <option value="114">구례구간1</option>
+                                        <option value="115">구례구간2</option>
+                                        <option value="68">구미</option>
+                                        <option value="187">구미</option>
+                                        <option value="275">금강39</option>
+                                        <option value="462">금강상류</option>
+                                        <option value="500">금강상류 1</option>
+                                        <option value="509">금강상류 10</option>
+                                        <option value="510">금강상류 11</option>
+                                        <option value="511">금강상류 12</option>
+                                        <option value="512">금강상류 13</option>
+                                        <option value="513">금강상류 14</option>
+                                        <option value="514">금강상류 15</option>
+                                        <option value="515">금강상류 16</option>
+                                        <option value="516">금강상류 17</option>
+                                        <option value="517">금강상류 18</option>
+                                        <option value="518">금강상류 19</option>
+                                        <option value="501">금강상류 2</option>
+                                        <option value="519">금강상류 20</option>
+                                        <option value="520">금강상류 21</option>
+                                        <option value="502">금강상류 3</option>
+                                        <option value="503">금강상류 4</option>
+                                        <option value="504">금강상류 5</option>
+                                        <option value="505">금강상류 6</option>
+                                        <option value="506">금강상류 7</option>
+                                        <option value="507">금강상류 8</option>
+                                        <option value="508">금강상류 9</option>
+                                        <option value="316">금강상류1</option>
+                                        <option value="325">금강상류10</option>
+                                        <option value="326">금강상류11</option>
+                                        <option value="327">금강상류12</option>
+                                        <option value="328">금강상류13</option>
+                                        <option value="317">금강상류2</option>
+                                        <option value="318">금강상류3</option>
+                                        <option value="319">금강상류4</option>
+                                        <option value="320">금강상류5</option>
+                                        <option value="321">금강상류6</option>
+                                        <option value="322">금강상류7</option>
+                                        <option value="323">금강상류8</option>
+                                        <option value="324">금강상류9</option>
+                                        <option value="463">금강하류</option>
+                                        <option value="521">금강하류 1</option>
+                                        <option value="530">금강하류 10</option>
+                                        <option value="531">금강하류 11</option>
+                                        <option value="532">금강하류 12</option>
+                                        <option value="533">금강하류 13</option>
+                                        <option value="534">금강하류 14</option>
+                                        <option value="535">금강하류 15</option>
+                                        <option value="536">금강하류 16</option>
+                                        <option value="537">금강하류 17</option>
+                                        <option value="522">금강하류 2</option>
+                                        <option value="523">금강하류 3</option>
+                                        <option value="524">금강하류 4</option>
+                                        <option value="525">금강하류 5</option>
+                                        <option value="526">금강하류 6</option>
+                                        <option value="527">금강하류 7</option>
+                                        <option value="528">금강하류 8</option>
+                                        <option value="529">금강하류 9</option>
+                                        <option value="329">금강하류1</option>
+                                        <option value="330">금강하류2</option>
+                                        <option value="331">금강하류3</option>
+                                        <option value="332">금강하류4</option>
+                                        <option value="333">금강하류5</option>
+                                        <option value="334">금강하류6</option>
+                                        <option value="335">금강하류7</option>
+                                        <option value="417">금강하류8</option>
+                                        <option value="418">금강하류9</option>
+                                        <option value="70">금호강 상류</option>
+                                        <option value="71">금호강 하류</option>
+                                        <option value="189">금호강상류</option>
+                                        <option value="190">금호강하류</option>
+                                        <option value="207">김천</option>
+                                        <option value="256">나주 공산면 ~ 나주 동강면</option>
+                                        <option value="265">나주 금전 ~ 화순 능주</option>
+                                        <option value="239">나주 금천 ~ 나주 삼영동</option>
+                                        <option value="257">나주 다시면 ~ 함평 나산면</option>
+                                        <option value="255">나주 안창동 ~ 나주 다시면</option>
+                                        <option value="91">나주구간1</option>
+                                        <option value="199">나주구간3</option>
+                                        <option value="211">나주구간4</option>
+                                        <option value="226">나주구간5</option>
+                                        <option value="382">낙동 중상류1</option>
+                                        <option value="391">낙동 중상류10</option>
+                                        <option value="393">낙동 중상류11</option>
+                                        <option value="392">낙동 중상류12</option>
+                                        <option value="394">낙동 중상류13</option>
+                                        <option value="395">낙동 중상류14</option>
+                                        <option value="396">낙동 중상류15</option>
+                                        <option value="397">낙동 중상류16</option>
+                                        <option value="398">낙동 중상류17</option>
+                                        <option value="399">낙동 중상류18</option>
+                                        <option value="400">낙동 중상류19</option>
+                                        <option value="383">낙동 중상류2</option>
+                                        <option value="401">낙동 중상류20</option>
+                                        <option value="402">낙동 중상류21</option>
+                                        <option value="403">낙동 중상류22</option>
+                                        <option value="404">낙동 중상류23</option>
+                                        <option value="405">낙동 중상류24</option>
+                                        <option value="406">낙동 중상류25</option>
+                                        <option value="407">낙동 중상류26</option>
+                                        <option value="408">낙동 중상류27</option>
+                                        <option value="409">낙동 중상류28</option>
+                                        <option value="410">낙동 중상류29</option>
+                                        <option value="384">낙동 중상류3</option>
+                                        <option value="411">낙동 중상류30</option>
+                                        <option value="412">낙동 중상류31</option>
+                                        <option value="413">낙동 중상류32</option>
+                                        <option value="414">낙동 중상류33</option>
+                                        <option value="415">낙동 중상류34</option>
+                                        <option value="416">낙동 중상류35</option>
+                                        <option value="385">낙동 중상류4</option>
+                                        <option value="386">낙동 중상류5</option>
+                                        <option value="387">낙동 중상류6</option>
+                                        <option value="388">낙동 중상류7</option>
+                                        <option value="389">낙동 중상류8</option>
+                                        <option value="390">낙동 중상류9</option>
+                                        <option value="225">낙동강 상류 안동</option>
+                                        <option value="276">낙동강 하류6</option>
+                                        <option value="677">낙동강상류 10구간</option>
+                                        <option value="678">낙동강상류 11구간</option>
+                                        <option value="679">낙동강상류 12구간</option>
+                                        <option value="680">낙동강상류 13구간</option>
+                                        <option value="681">낙동강상류 14구간</option>
+                                        <option value="682">낙동강상류 15구간</option>
+                                        <option value="683">낙동강상류 16구간</option>
+                                        <option value="684">낙동강상류 17구간</option>
+                                        <option value="685">낙동강상류 18구간</option>
+                                        <option value="686">낙동강상류 19구간</option>
+                                        <option value="668">낙동강상류 1구간</option>
+                                        <option value="687">낙동강상류 20구간</option>
+                                        <option value="688">낙동강상류 21구간</option>
+                                        <option value="689">낙동강상류 22구간</option>
+                                        <option value="690">낙동강상류 23구간</option>
+                                        <option value="691">낙동강상류 24구간</option>
+                                        <option value="692">낙동강상류 25구간</option>
+                                        <option value="693">낙동강상류 26구간</option>
+                                        <option value="694">낙동강상류 27구간</option>
+                                        <option value="695">낙동강상류 28구간</option>
+                                        <option value="696">낙동강상류 29구간</option>
+                                        <option value="669">낙동강상류 2구간</option>
+                                        <option value="697">낙동강상류 30구간</option>
+                                        <option value="698">낙동강상류 31구간</option>
+                                        <option value="699">낙동강상류 32구간</option>
+                                        <option value="700">낙동강상류 33구간</option>
+                                        <option value="701">낙동강상류 34구간</option>
+                                        <option value="702">낙동강상류 35구간</option>
+                                        <option value="703">낙동강상류 36구간</option>
+                                        <option value="704">낙동강상류 37구간</option>
+                                        <option value="705">낙동강상류 38구간</option>
+                                        <option value="706">낙동강상류 39구간</option>
+                                        <option value="670">낙동강상류 3구간</option>
+                                        <option value="707">낙동강상류 40구간</option>
+                                        <option value="708">낙동강상류 41구간</option>
+                                        <option value="709">낙동강상류 42구간</option>
+                                        <option value="671">낙동강상류 4구간</option>
+                                        <option value="672">낙동강상류 5구간</option>
+                                        <option value="673">낙동강상류 6구간</option>
+                                        <option value="674">낙동강상류 7구간</option>
+                                        <option value="675">낙동강상류 8구간</option>
+                                        <option value="676">낙동강상류 9구간</option>
+                                        <option value="711">낙동강중류 43구간</option>
+                                        <option value="712">낙동강중류 44구간</option>
+                                        <option value="713">낙동강중류 45구간</option>
+                                        <option value="714">낙동강중류 46구간</option>
+                                        <option value="715">낙동강중류 47구간</option>
+                                        <option value="716">낙동강중류 48구간</option>
+                                        <option value="717">낙동강중류 49구간</option>
+                                        <option value="718">낙동강중류 50구간</option>
+                                        <option value="719">낙동강중류 51구간</option>
+                                        <option value="720">낙동강중류 52구간</option>
+                                        <option value="721">낙동강중류 53구간</option>
+                                        <option value="722">낙동강중류 54구간</option>
+                                        <option value="723">낙동강중류 55구간</option>
+                                        <option value="724">낙동강중류 56구간</option>
+                                        <option value="725">낙동강중류 57구간</option>
+                                        <option value="726">낙동강중류 58구간</option>
+                                        <option value="727">낙동강중류 59구간</option>
+                                        <option value="728">낙동강중류 60구간</option>
+                                        <option value="729">낙동강중류 61구간</option>
+                                        <option value="730">낙동강중류 62구간</option>
+                                        <option value="731">낙동강중류 63구간</option>
+                                        <option value="732">낙동강중류 64구간</option>
+                                        <option value="733">낙동강중류 65구간</option>
+                                        <option value="734">낙동강중류 66구간</option>
+                                        <option value="735">낙동강중류 67구간</option>
+                                        <option value="736">낙동강중류 68구간</option>
+                                        <option value="737">낙동강중류 69구간</option>
+                                        <option value="738">낙동강중류 70구간</option>
+                                        <option value="739">낙동강중류 71구간</option>
+                                        <option value="740">낙동강중류 72구간</option>
+                                        <option value="742">낙동강중류 73구간</option>
+                                        <option value="743">낙동강중류 74구간</option>
+                                        <option value="744">낙동강중류 75구간</option>
+                                        <option value="745">낙동강중류 76구간</option>
+                                        <option value="746">낙동강중류 77구간</option>
+                                        <option value="747">낙동강중류 78구간</option>
+                                        <option value="748">낙동강중류 79구간</option>
+                                        <option value="749">낙동강중류 80구간</option>
+                                        <option value="750">낙동강중류 81구간</option>
+                                        <option value="751">낙동강중류 82구간</option>
+                                        <option value="752">낙동강중류 83구간</option>
+                                        <option value="753">낙동강중류 84구간</option>
+                                        <option value="219">남강</option>
+                                        <option value="75">남강 상류</option>
+                                        <option value="76">남강 하류</option>
+                                        <option value="633">남강상류 남강댐1</option>
+                                        <option value="642">남강상류 남강댐10</option>
+                                        <option value="643">남강상류 남강댐11</option>
+                                        <option value="644">남강상류 남강댐12</option>
+                                        <option value="634">남강상류 남강댐2</option>
+                                        <option value="635">남강상류 남강댐3</option>
+                                        <option value="636">남강상류 남강댐4</option>
+                                        <option value="637">남강상류 남강댐5</option>
+                                        <option value="638">남강상류 남강댐6</option>
+                                        <option value="639">남강상류 남강댐7</option>
+                                        <option value="640">남강상류 남강댐8</option>
+                                        <option value="641">남강상류 남강댐9</option>
+                                        <option value="645">남강하류 남강1-1</option>
+                                        <option value="646">남강하류 남강1-2</option>
+                                        <option value="647">남강하류 남강1-3</option>
+                                        <option value="648">남강하류 남강1-4</option>
+                                        <option value="649">남강하류 남강2-1</option>
+                                        <option value="650">남강하류 남강2-2</option>
+                                        <option value="651">남강하류 남강2-3</option>
+                                        <option value="652">남강하류 남강2-4</option>
+                                        <option value="653">남강하류 남강2-5</option>
+                                        <option value="654">남강하류 남강3-1</option>
+                                        <option value="655">남강하류 남강3-2</option>
+                                        <option value="656">남강하류 남강3-3</option>
+                                        <option value="657">남강하류 남강3-4</option>
+                                        <option value="262">남원 금지면 ~ 곡성 오곡면</option>
+                                        <option value="268">남원 생암리 ~ 곡성 송강리</option>
+                                        <option value="245">남원 주생면 ~ 남원 산동면</option>
+                                        <option value="108">남원구간1</option>
+                                        <option value="110">남원구간2</option>
+                                        <option value="30">남한강1</option>
+                                        <option value="39">남한강10</option>
+                                        <option value="40">남한강11</option>
+                                        <option value="31">남한강2</option>
+                                        <option value="34">남한강3</option>
+                                        <option value="33">남한강4</option>
+                                        <option value="32">남한강5</option>
+                                        <option value="35">남한강6</option>
+                                        <option value="36">남한강7</option>
+                                        <option value="37">남한강8</option>
+                                        <option value="38">남한강9</option>
+                                        <option value="550">남한강권역 1</option>
+                                        <option value="756">남한강권역 10</option>
+                                        <option value="551">남한강권역 2</option>
+                                        <option value="552">남한강권역 3</option>
+                                        <option value="553">남한강권역 4</option>
+                                        <option value="554">남한강권역 5</option>
+                                        <option value="555">남한강권역 6</option>
+                                        <option value="556">남한강권역 7</option>
+                                        <option value="557">남한강권역 8</option>
+                                        <option value="558">남한강권역 9</option>
+                                        <option value="65">내성천</option>
+                                        <option value="802">달방댐1(역)</option>
+                                        <option value="801">달방댐1(정)</option>
+                                        <option value="779">달천1</option>
+                                        <option value="780">달천2</option>
+                                        <option value="781">달천3</option>
+                                        <option value="236">담양 금성 ~ 담양 봉산</option>
+                                        <option value="250">담양 대전 ~ 광주 신가동</option>
+                                        <option value="249">담양 봉산 ~ 담양 대전</option>
+                                        <option value="85">담양구간1</option>
+                                        <option value="86">담양구간2</option>
+                                        <option value="191">대구, 다사</option>
+                                        <option value="72">대구.다사</option>
+                                        <option value="460">대청상류</option>
+                                        <option value="466">대청상류 1</option>
+                                        <option value="475">대청상류 10</option>
+                                        <option value="476">대청상류 11</option>
+                                        <option value="477">대청상류 12</option>
+                                        <option value="478">대청상류 13</option>
+                                        <option value="479">대청상류 14</option>
+                                        <option value="480">대청상류 15</option>
+                                        <option value="481">대청상류 16</option>
+                                        <option value="467">대청상류 2</option>
+                                        <option value="468">대청상류 3</option>
+                                        <option value="469">대청상류 4</option>
+                                        <option value="470">대청상류 5</option>
+                                        <option value="471">대청상류 6</option>
+                                        <option value="472">대청상류 7</option>
+                                        <option value="473">대청상류 8</option>
+                                        <option value="474">대청상류 9</option>
+                                        <option value="461">대청호</option>
+                                        <option value="482">대청호 1</option>
+                                        <option value="491">대청호 10</option>
+                                        <option value="492">대청호 11</option>
+                                        <option value="493">대청호 12</option>
+                                        <option value="494">대청호 13</option>
+                                        <option value="495">대청호 14</option>
+                                        <option value="496">대청호 15</option>
+                                        <option value="497">대청호 16</option>
+                                        <option value="498">대청호 17</option>
+                                        <option value="499">대청호 18</option>
+                                        <option value="483">대청호 2</option>
+                                        <option value="484">대청호 3</option>
+                                        <option value="485">대청호 4</option>
+                                        <option value="486">대청호 5</option>
+                                        <option value="487">대청호 6</option>
+                                        <option value="488">대청호 7</option>
+                                        <option value="489">대청호 8</option>
+                                        <option value="490">대청호 9</option>
+                                        <option value="346">대청호1</option>
+                                        <option value="359">대청호10</option>
+                                        <option value="361">대청호11</option>
+                                        <option value="381">대청호12</option>
+                                        <option value="349">대청호2</option>
+                                        <option value="350">대청호3</option>
+                                        <option value="351">대청호4</option>
+                                        <option value="352">대청호5</option>
+                                        <option value="353">대청호6</option>
+                                        <option value="354">대청호7</option>
+                                        <option value="355">대청호8</option>
+                                        <option value="356">대청호9</option>
+                                        <option value="625">동부권역 미전천</option>
+                                        <option value="619">동부권역 밀양강1</option>
+                                        <option value="620">동부권역 밀양강2</option>
+                                        <option value="621">동부권역 밀양강3</option>
+                                        <option value="631">동부권역 밀양댐(역방향)</option>
+                                        <option value="630">동부권역 밀양댐(정방향)</option>
+                                        <option value="608">동부권역 본류3-1</option>
+                                        <option value="609">동부권역 본류3-2</option>
+                                        <option value="610">동부권역 본류4-1</option>
+                                        <option value="611">동부권역 본류4-2</option>
+                                        <option value="612">동부권역 본류4-3</option>
+                                        <option value="613">동부권역 본류4-4</option>
+                                        <option value="614">동부권역 본류4-5</option>
+                                        <option value="632">동부권역 사연댐</option>
+                                        <option value="624">동부권역 상남천</option>
+                                        <option value="615">동부권역 서낙동강1</option>
+                                        <option value="616">동부권역 서낙동강2</option>
+                                        <option value="622">동부권역 양산천1</option>
+                                        <option value="623">동부권역 양산천2</option>
+                                        <option value="627">동부권역 조만강</option>
+                                        <option value="629">동부권역 주천강</option>
+                                        <option value="626">동부권역 퇴래천</option>
+                                        <option value="628">동부권역 평천강</option>
+                                        <option value="617">동부권역 화포천1</option>
+                                        <option value="618">동부권역 화포천2</option>
+                                        <option value="372">동부권역1구간</option>
+                                        <option value="373">동부권역2구간</option>
+                                        <option value="374">동부권역3구간</option>
+                                        <option value="375">동부권역4구간</option>
+                                        <option value="376">동부권역5구간</option>
+                                        <option value="377">동부권역6구간</option>
+                                        <option value="378">동부권역7구간</option>
+                                        <option value="379">동부권역8구간</option>
+                                        <option value="380">동부권역9구간</option>
+                                        <option value="101">목포구간</option>
+                                        <option value="240">무안 몽탄 ~ 무안 일로읍</option>
+                                        <option value="259">무안 복용리 ~ 영암 학산면</option>
+                                        <option value="241">무안 학산면 ~ 영암 삼호읍</option>
+                                        <option value="99">무안구간1</option>
+                                        <option value="100">무안구간2</option>
+                                        <option value="184">문경,예천</option>
+                                        <option value="79">밀양강.화포천</option>
+                                        <option value="61">봉화.태백</option>
+                                        <option value="227">북한강 11구간</option>
+                                        <option value="209">북한강1</option>
+                                        <option value="20">북한강10</option>
+                                        <option value="29">북한강2</option>
+                                        <option value="24">북한강3</option>
+                                        <option value="28">북한강4</option>
+                                        <option value="25">북한강5</option>
+                                        <option value="22">북한강6</option>
+                                        <option value="210">북한강7</option>
+                                        <option value="23">북한강8</option>
+                                        <option value="21">북한강9</option>
+                                        <option value="580">북한강권역 1</option>
+                                        <option value="589">북한강권역 10</option>
+                                        <option value="581">북한강권역 2</option>
+                                        <option value="582">북한강권역 3</option>
+                                        <option value="583">북한강권역 4</option>
+                                        <option value="584">북한강권역 5</option>
+                                        <option value="585">북한강권역 6</option>
+                                        <option value="586">북한강권역 7</option>
+                                        <option value="587">북한강권역 8</option>
+                                        <option value="588">북한강권역 9</option>
+                                        <option value="790">삼척1</option>
+                                        <option value="791">삼척2</option>
+                                        <option value="66">상주</option>
+                                        <option value="185">상주</option>
+                                        <option value="81">서낙동강</option>
+                                        <option value="604">서부권역 계성천</option>
+                                        <option value="606">서부권역 광려천</option>
+                                        <option value="592">서부권역 본류1-1</option>
+                                        <option value="593">서부권역 본류1-2</option>
+                                        <option value="594">서부권역 본류1-3</option>
+                                        <option value="595">서부권역 본류1-4</option>
+                                        <option value="596">서부권역 본류2-1</option>
+                                        <option value="597">서부권역 본류2-2</option>
+                                        <option value="598">서부권역 본류2-3</option>
+                                        <option value="599">서부권역 본류2-4</option>
+                                        <option value="600">서부권역 본류2-5</option>
+                                        <option value="601">서부권역 본류2-6</option>
+                                        <option value="605">서부권역 영산천</option>
+                                        <option value="603">서부권역 창녕천</option>
+                                        <option value="607">서부권역 초동천</option>
+                                        <option value="602">서부권역 토평천</option>
+                                        <option value="366">서부권역10구간</option>
+                                        <option value="367">서부권역11구간</option>
+                                        <option value="368">서부권역12구간</option>
+                                        <option value="369">서부권역13구간</option>
+                                        <option value="370">서부권역14구간</option>
+                                        <option value="371">서부권역15구간</option>
+                                        <option value="456">서부권역16구간</option>
+                                        <option value="347">서부권역1구간</option>
+                                        <option value="348">서부권역2구간</option>
+                                        <option value="357">서부권역3구간</option>
+                                        <option value="358">서부권역4구간</option>
+                                        <option value="360">서부권역5구간</option>
+                                        <option value="362">서부권역6구간</option>
+                                        <option value="363">서부권역7구간</option>
+                                        <option value="364">서부권역8구간</option>
+                                        <option value="365">서부권역9구간</option>
+                                        <option value="248">석현교</option>
+                                        <option value="782">섬강1</option>
+                                        <option value="783">섬강2</option>
+                                        <option value="784">섬강3</option>
+                                        <option value="299">섬진강23</option>
+                                        <option value="300">섬진강24</option>
+                                        <option value="301">섬진강25</option>
+                                        <option value="302">섬진강26</option>
+                                        <option value="303">섬진강27</option>
+                                        <option value="304">섬진강28</option>
+                                        <option value="305">섬진강29</option>
+                                        <option value="306">섬진강30</option>
+                                        <option value="307">섬진강31</option>
+                                        <option value="308">섬진강32</option>
+                                        <option value="309">섬진강33</option>
+                                        <option value="310">섬진강34</option>
+                                        <option value="311">섬진강35</option>
+                                        <option value="312">섬진강36</option>
+                                        <option value="313">섬진강37</option>
+                                        <option value="314">섬진강38</option>
+                                        <option value="315">섬진강39</option>
+                                        <option value="757">소양1</option>
+                                        <option value="758">소양2</option>
+                                        <option value="759">소양3</option>
+                                        <option value="803">소양강댐1</option>
+                                        <option value="804">소양강댐2</option>
+                                        <option value="805">소양강댐3</option>
+                                        <option value="806">소양강댐4</option>
+                                        <option value="786">속초1</option>
+                                        <option value="244">순창 유등면 ~ 순창 동계군</option>
+                                        <option value="267">순창 유촌리 ~ 남원 생암리</option>
+                                        <option value="106">순창구간1</option>
+                                        <option value="107">순창구간2</option>
+                                        <option value="247">순천 황전면 ~ 구례 마산면</option>
+                                        <option value="117">순천구간</option>
+                                        <option value="223">아이원맥스</option>
+                                        <option value="235">아이원맥스2</option>
+                                        <option value="183">안동</option>
+                                        <option value="62">안동댐</option>
+                                        <option value="64">안동댐 하류</option>
+                                        <option value="181">안동댐상류</option>
+                                        <option value="787">양양1</option>
+                                        <option value="279">영산강1</option>
+                                        <option value="288">영산강10</option>
+                                        <option value="289">영산강11</option>
+                                        <option value="290">영산강12</option>
+                                        <option value="293">영산강13</option>
+                                        <option value="292">영산강14</option>
+                                        <option value="291">영산강15</option>
+                                        <option value="294">영산강16</option>
+                                        <option value="295">영산강17</option>
+                                        <option value="296">영산강18</option>
+                                        <option value="297">영산강19</option>
+                                        <option value="280">영산강2</option>
+                                        <option value="298">영산강20</option>
+                                        <option value="458">영산강21</option>
+                                        <option value="459">영산강22</option>
+                                        <option value="281">영산강3</option>
+                                        <option value="282">영산강4</option>
+                                        <option value="283">영산강5</option>
+                                        <option value="284">영산강6</option>
+                                        <option value="285">영산강7</option>
+                                        <option value="286">영산강8</option>
+                                        <option value="287">영산강9</option>
+                                        <option value="260">영암 삼호읍 ~ 영암 덕진면</option>
+                                        <option value="261">영암 시종면 ~ 나주 공산면</option>
+                                        <option value="94">영암구간1</option>
+                                        <option value="95">영암구간2</option>
+                                        <option value="774">영월1</option>
+                                        <option value="775">영월2</option>
+                                        <option value="776">영월3</option>
+                                        <option value="777">영월4</option>
+                                        <option value="549">왕숙천 1</option>
+                                        <option value="233">왕숙천1</option>
+                                        <option value="234">왕숙천2</option>
+                                        <option value="562">용담1</option>
+                                        <option value="571">용담10</option>
+                                        <option value="572">용담11</option>
+                                        <option value="573">용담12</option>
+                                        <option value="574">용담13</option>
+                                        <option value="575">용담14</option>
+                                        <option value="576">용담15</option>
+                                        <option value="577">용담16</option>
+                                        <option value="578">용담17</option>
+                                        <option value="579">용담18</option>
+                                        <option value="563">용담2</option>
+                                        <option value="564">용담3</option>
+                                        <option value="565">용담4</option>
+                                        <option value="566">용담5</option>
+                                        <option value="567">용담6</option>
+                                        <option value="568">용담7</option>
+                                        <option value="569">용담8</option>
+                                        <option value="570">용담9</option>
+                                        <option value="336">용담호1</option>
+                                        <option value="345">용담호10</option>
+                                        <option value="337">용담호2</option>
+                                        <option value="338">용담호3</option>
+                                        <option value="339">용담호4</option>
+                                        <option value="340">용담호5</option>
+                                        <option value="341">용담호6</option>
+                                        <option value="342">용담호7</option>
+                                        <option value="343">용담호8</option>
+                                        <option value="344">용담호9</option>
+                                        <option value="186">의성</option>
+                                        <option value="67">의성.군위</option>
+                                        <option value="242">임실 강진면 ~ 순창 동계면</option>
+                                        <option value="103">임실구간1</option>
+                                        <option value="104">임실구간2</option>
+                                        <option value="63">임하댐</option>
+                                        <option value="251">장성 황룡면 ~ 장성 서삼면</option>
+                                        <option value="89">장성구간1</option>
+                                        <option value="90">장성구간2</option>
+                                        <option value="770">정선1</option>
+                                        <option value="771">정선2</option>
+                                        <option value="772">정선3</option>
+                                        <option value="773">정선4</option>
+                                        <option value="590">조정천 1</option>
+                                        <option value="591">조정천 2</option>
+                                        <option value="228">조정천1</option>
+                                        <option value="229">조종천2</option>
+                                        <option value="266">진안 연장리 ~ 진안 용포리</option>
+                                        <option value="102">진안구간</option>
+                                        <option value="271">진안군 마령면~진안군 백운면</option>
+                                        <option value="272">진안군 성수면~임실군 신평면</option>
+                                        <option value="218">창녕</option>
+                                        <option value="216">창원.밀양</option>
+                                        <option value="559">청미천 1</option>
+                                        <option value="560">청미천 2</option>
+                                        <option value="54">청미천1</option>
+                                        <option value="55">청미천2</option>
+                                        <option value="56">청미천3</option>
+                                        <option value="122">청미천4</option>
+                                        <option value="182">청송,영양, 임하댐</option>
+                                        <option value="762">춘천1</option>
+                                        <option value="763">춘천2</option>
+                                        <option value="764">춘천3</option>
+                                        <option value="778">충주1</option>
+                                        <option value="792">충주댐1</option>
+                                        <option value="793">충주댐2</option>
+                                        <option value="794">충주댐3</option>
+                                        <option value="795">충주댐4</option>
+                                        <option value="796">충주댐5</option>
+                                        <option value="797">충주댐6</option>
+                                        <option value="188">칠곡, 성주</option>
+                                        <option value="69">칠곡.성주</option>
+                                        <option value="217">칠서</option>
+                                        <option value="180">태백, 봉화</option>
+                                        <option value="44">팔당1</option>
+                                        <option value="45">팔당2</option>
+                                        <option value="46">팔당3</option>
+                                        <option value="47">팔당4</option>
+                                        <option value="48">팔당5</option>
+                                        <option value="230">팔당6</option>
+                                        <option value="231">팔당7</option>
+                                        <option value="457">팔당8</option>
+                                        <option value="538">팔당권역 1</option>
+                                        <option value="539">팔당권역 2</option>
+                                        <option value="540">팔당권역 3</option>
+                                        <option value="541">팔당권역 4</option>
+                                        <option value="542">팔당권역 5</option>
+                                        <option value="543">팔당권역 6</option>
+                                        <option value="544">팔당권역 7</option>
+                                        <option value="545">팔당권역 8</option>
+                                        <option value="767">평창1</option>
+                                        <option value="768">평창2</option>
+                                        <option value="769">평창3</option>
+                                        <option value="213">하구언</option>
+                                        <option value="264">하동 화개면 ~ 광양 다압면</option>
+                                        <option value="118">하동구간1</option>
+                                        <option value="119">하동구간2</option>
+                                        <option value="273">하동군 악양면~광양시 진월면</option>
+                                        <option value="195">한강수계</option>
+                                        <option value="220">한강테스트</option>
+                                        <option value="214">한림.상동</option>
+                                        <option value="258">함평 학교면 ~ 함평 대동면</option>
+                                        <option value="97">함평구간1</option>
+                                        <option value="98">함평구간2</option>
+                                        <option value="765">홍천1</option>
+                                        <option value="766">홍천2</option>
+                                        <option value="254">화순 연양리 ~ 화순 춘양면</option>
+                                        <option value="760">화천1</option>
+                                        <option value="761">화천2</option>
+                                        <option value="658">황강권역 황강1-1</option>
+                                        <option value="659">황강권역 황강1-2</option>
+                                        <option value="660">황강권역 황강1-3</option>
+                                        <option value="661">황강권역 황강1-4</option>
+                                        <option value="662">황강권역 황강1-5</option>
+                                        <option value="663">황강권역 황강1-6</option>
+                                        <option value="664">황강권역 황강2-1</option>
+                                        <option value="665">황강권역 황강2-2</option>
+                                        <option value="666">황강권역 황강3-1</option>
+                                        <option value="667">황강권역 황강3-2</option>
+                                        <option value="799">횡성댐1(역)</option>
+                                        <option value="798">횡성댐1(정)</option>
+
+                                    </select>
+                                </dd>
+                                <dt>근무구간명</dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input type="text" id="searchKey2" name="searchKey2" maxlength="20" title="관리강"
+                                            class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl class="area-setting">
+                                <dt>번호</dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input type="text" id="searchKey3" name="searchKey3" maxlength="20" title="번호"
+                                            class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </dd>
+                                <dt>범위</dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input type="text" id="searchKey4" name="searchKey4" maxlength="20" title="범위"
+                                            class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl class="area-setting">
+                                <dt>좌표</dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input type="text" id="searchKey5" name="searchKey5" maxlength="10"
+                                            placeholder="X좌표" title="X좌표" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </dd>
+                                <dt> <a href="#" class="link-s link-blue">수정</a></dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input type="text" id="searchKey6" name="searchKey6" maxlength="10"
+                                            placeholder="Y좌표" title="Y좌표" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl class="area-setting area-time">
+                                <dt>시간</dt>
+                                <dd>
+                                    <input type="text" placeholder="시"> : <input type="text" placeholder="분"> :
+                                    <input type="text" placeholder="초">
+                                </dd>
+                            </dl>
+
+                        </div>
+
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="./dist/vendor/jquery/jquery.min.js"></script>
+    <script src="./dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="./dist/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./dist/vendor/summernote/summernote-bs4.min.js"></script> <!-- Summernote-->
+    <script src="./dist/js/include.js"></script>
+    <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"> </script> <!-- MultiSelect -->
+    <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.kr.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <script src="./dist/vendor/fancybox/jquery.fancybox.min.js"></script> <!-- fancy gallery -->
+    <script src="./dist/js/front.js"></script> <!-- Main File-->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</body>
+
+</html>
