@@ -260,6 +260,19 @@ $(document).ready(function () {
         }
     );
 
+    // ------------------------------------------------------ //
+    // map-pop
+    // ------------------------------------------------------ //
+    
+    $('.contents-pop').each(function(){
+
+        let $this = $(this),
+            toggleBtn = $('.shadow');
+
+        toggleBtn.on('click', function(){
+            $this.toggleClass('collapsed');
+        })
+    })
     
 
 

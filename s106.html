@@ -47,7 +47,7 @@
           </div>
         </div>
         <!-- Sidebar Navigation Menus-->
-        <div class="main-menu">
+        <div id="gnb" class="main-menu">
           <h5 class="blind">주메뉴</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">
             <li>
@@ -159,19 +159,25 @@
   
               </div>
               
-              <div class="contents-col2" style="height: 68vh">
+              <div class="contents-col2 et0">
                 <div class="col-left" style="width: 55%;">
-                    <dl class="area-diligence" style="height: 8%;">
-                        <dt>출근</dt>
-                        <dd>140명</dd>
-                        <dt>퇴근</dt>
-                        <dd>140명</dd>
-                        <dt>휴가</dt>
-                        <dd>0명</dd>
-                      </dl>
+                  <div class="tbl-info">
+                    <div class="col-diligence c-blue">
+                      <strong class="tit-info">출근</strong>
+                      <span id="gauge2Value" class="gauge-label">29명</span>
+                    </div>
+                    <div class="col-diligence c-red">
+                      <strong class="tit-info">퇴근</strong>
+                      <span id="gauge2Value" class="gauge-label">29명</span>
+                    </div>
+                    <div class="col-diligence c-purple-dark">
+                      <strong class="tit-info">휴가</strong>
+                      <span id="gauge1Value" class="gauge-label">8명</span>
+                    </div>
+                </div>
                       
                       <!-- table -->
-                      <div class=" tbl-scroll-wrap" style="height: 92%;">
+                      <div class=" tbl-scroll-wrap">
                         <div class="tbl-original mCustomScrollbar">
                           <table class="tbl-g table">
                           <caption>복무일자, 소속, 담당구역, 성명, 이탈건수 목록입니다.</caption>
@@ -432,7 +438,7 @@
                 </div>
                 <div class="col-right" style="width: 44%;">
                     <!-- table -->
-                    <div class=" tbl-scroll-wrap h100">
+                    <div class=" tbl-scroll-wrap">
                         <div class="tbl-original mCustomScrollbar">
                           <table class="tbl-g table">
                           <caption>보고항목, 강이름, 지역이름, 보고횟수 목록입니다.</caption>

@@ -20,7 +20,8 @@
 </head>
 <body>
     <div class="contents-pop">
-          <!-- search -->
+        <div class="table-responsive">
+
           <div class="tbl-header clear-g">
 
             <form class="form-inline" id="noticeList" name="noticeList">
@@ -66,38 +67,26 @@
             </form>
 
           </div>
-        <div class="table-responsive">
-          
 
-          <div class="contents-col2">
+          <div class="contents-col2" style="height: 90vh;">
               <dlv class="col-left">
-
-                <!-- 근태 -->
-                <div class="tbl-info">
-                  <div class="col-diligence c-blue">
-                    <strong class="tit-info">출근</strong>
-                    <span id="gauge2Value" class="gauge-label">29명</span>
-                  </div>
-                  <div class="col-diligence c-red">
-                    <strong class="tit-info">퇴근</strong>
-                    <span id="gauge2Value" class="gauge-label">29명</span>
-                  </div>
-                  <div class="col-diligence c-purple-dark">
-                    <strong class="tit-info">휴가</strong>
-                    <span id="gauge1Value" class="gauge-label">8명</span>
-                  </div>
-              </div>
-                
                   <!-- btn -->
                   <div class="area-btn">
-                    <button class="link-s link-blue">위치보기</button>
-                    <button class="link-s link-blue">궤적보기</button>
-                    <button class="link-s link-blue" data-toggle="modal" data-target="#trackingPath">궤적Text보기</button>
+                    <a href="#" class="link-s link-blue">위치보기</a>
+                    <a href="#" class="link-s link-blue">궤적보기</a>
+                    <a href="#trackingPath" class="link-s link-blue" data-toggle="modal" data-target="#trackingPath">궤적Text보기</a>
                   </div>
-
+                  <dl class="area-diligence">
+                    <dt>출근</dt>
+                    <dd>140명</dd>
+                    <dt>퇴근</dt>
+                    <dd>140명</dd>
+                    <dt>휴가</dt>
+                    <dd>0명</dd>
+                  </dl>
                       <!-- table -->
                     <div class=" tbl-scroll-wrap ">
-                         <div class="tbl-original mCustomScrollbar">
+                          <div class="tbl-original mCustomScrollbar">
                             <table class="tbl-g table">
                             <caption>번호, 이름, 관할지역, 이탈건수, 이동거리 목록입니다.</caption>
                             <colgroup>
@@ -381,15 +370,11 @@
                     <!-- //table -->
 
               </dlv>
-              <div id="shadow" class="shadow">
-                <div class="bar"></div>
-                <span id="shadow.toggle" class="toggle"></span>
-              </div>
               
               <div class="col-right">
                   <!-- 지도 -->
                   <div class="area-map">
-                    <img src="./images/map.png" class="pos-center" alt="인천 강화군 하점면 고려산로 89-12">
+                    <img src="./images/map.png" alt="인천 강화군 하점면 고려산로 89-12">
 
                     <div class="point-map" style="bottom:40%;right: 330px;">
                       <i class="i- i-pos">지킴이 위치 표시</i>

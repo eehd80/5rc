@@ -17,6 +17,13 @@ a {
 .clear-g:after {display:block;visibility:hidden;height:0;font-size:0;clear:both;content:''}
 .ml-a {margin-left: auto !important;}
 .mr-a {margin-right: auto !important;}
+.mt-a {margin-top: auto !important;}
+.mb-a {margin-bottom: auto !important;}
+.pb-500 {
+    $w : 500px;
+    padding-bottom: $w + 70px !important;
+    .tbl-original{height: $w !important;}
+}
 .ell {
     display: inline-block;overflow: hidden;
 	text-overflow: ellipsis;white-space: nowrap;vertical-align: middle;
@@ -25,6 +32,9 @@ a {
     display: inline-block; padding: 0 7px 0 0;
     font-style: normal;
 }
+.pos-center {@include posXY;z-index: 1;}
+.pos-b {position: absolute;bottom: 20px;left: 0;right: 0;}
+
 
 // comm
 .img-object {
@@ -125,14 +135,14 @@ input[type='text'], input[type='password'], input[type='email'] {
     vertical-align: top;
 }
 .i-checks {
+    $w : 20px;
     position: relative;
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: $w;
+    height: $w;
     input.form-control-custom + label::before {
-        $w : 25px;
         width: $w;height: $w;
-        line-height: 25px;
+        line-height: $w;
         border: 1px solid $border-color;
     }
     input.form-control-custom + label {
@@ -147,8 +157,8 @@ input[type='text'], input[type='password'], input[type='email'] {
     }
     input.form-control-custom + label::after {
         position: absolute;
-        top: 2px;left: 5px;
-        font-size: 16px;
+        top: 3px;left: 5px;
+        font-size: 12px;
     }
 }
 
@@ -372,7 +382,7 @@ input[type='text'], input[type='password'], input[type='email'] {
 
 //header 
 .header {
-    position: fixed;top: 0;left: 0;right: 0;z-index: 1000000;
+    position: fixed;top: 0;left: 0;right: 0;z-index: 1000;
 }
 nav.navbar {
     display: flex; justify-content: space-between;
@@ -416,6 +426,7 @@ nav.navbar {
 
 // contents
 .contents {
+    flex: 1;
     // max-width: 1300px;
     box-shadow: none;
 }
@@ -431,8 +442,18 @@ nav.navbar {
 // main
 #main.page{
     top: 76px;
-    min-height: 92vh;
+    height: calc(100% - 80px);
+    min-height: 0;
+    padding-bottom: 0;
     background: #fff;
+    section {
+        height: 100%;
+    }
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 section header {
     padding-top: 2rem;
@@ -450,50 +471,30 @@ section header {
     border-bottom: 1px solid $blue;
 }
 .table-responsive {
+    display: flex; flex-direction: column;
     overflow: visible;
     position: relative;
-    height: auto;
+    height: 100%; padding-bottom: 20px;
     text-align: center;
-    // .table-hover {
-    //     background: rgb(246, 246, 246);
-    // }
-    
-    
-    
 }
 
 .tbl-scroll-wrap {
     position: relative;
-
-    //table- chrome
-    // .tbl-original {
-    //     position: relative;
-    //     overflow: visible;
-    //     height: auto;
-    //     border-bottom: 1px solid $blue;
-    // }
-    
-    // .tbl-clone-wrap {
-    //     display: none;
-    // }
-
-    //table- ie
-    // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        /* Enter your style code */
+    flex: 1;
         .tbl-original {
             position: relative;
             overflow-y: auto;
+            position: absolute;top: 0;left: 0;right: 0;
             height: 100%;
-            max-height: 66vh;
+            // max-height: none;
             border-bottom: 1px solid $blue;
         }
         
         .tbl-clone-wrap {
             display: block;
             position: absolute !important;top: 0;left: 0;right: 0;
-            z-index: 1000;
+            z-index: 100;
         }
-    // }    
 }
 .tbl-scroll-wrap2 {
     position: relative;
@@ -518,7 +519,7 @@ section header {
     }
 }
 .tbl-footer {
-    margin-top: 10px;
+    margin-top: auto;padding-top: 20px;
     .txt-join {
         line-height: 36px;
     }
@@ -527,7 +528,7 @@ section header {
 .table {
     position: relative;
     border-collapse: collapse; 
-    border-bottom: 1px solid $blue;
+    // border-bottom: 1px solid $blue;
 
     &.curser-none {
         tr:hover {
@@ -558,6 +559,7 @@ section header {
         padding: .5em;
         background: #fff;
         vertical-align: middle;text-align: center;
+        white-space: nowrap;
         a.text-muted {
             display: block;
             text-align: left;color: $blue !important;
@@ -565,6 +567,7 @@ section header {
         img {
             width: 100%;height: auto;
             // object-fit: cover;
+            z-index: 90;
         }
     }
 
@@ -595,6 +598,9 @@ section header {
         td {
             padding-left: 1%;
             text-align: left;
+            .row- {
+                white-space: normal;
+            }
             span {
                 display: block;
                 width: 90%; margin-bottom: 3px; padding: 3px 10px;
@@ -720,7 +726,7 @@ section header {
 
 // 글보기 - Modal
 .modal { 
-    display: block;
+    display: block; z-index: 1000050;
     // background: rgba(0,0,0,.5);
     .modal-dialog {
         max-width: 100%;max-height: 100%;
@@ -812,7 +818,7 @@ section header {
             position: absolute;top: 9px;right: 20px;
         }
         .write-textarea {
-            width: 100%;height: 500px;
+            width: 100%;height: 500px; padding: 20px;
             background: $bgLightgray;
             border: 1px solid $border-color;
         }
@@ -868,7 +874,7 @@ section header {
     .area-btn {
         width: 60%;
         display: flex;justify-content: flex-end;align-items: center;
-        a, input {
+        a, input, button {
             margin-left: 5px;
         }
     }
@@ -905,7 +911,7 @@ section header {
     }
     .form-inline {
         width: 100%;
-      display: flex;
+      display: flex; flex-wrap: nowrap;
       > div {
           margin-right: 5px;
       }
@@ -1124,8 +1130,7 @@ section header {
 }
 .contents-col2 {
     display: flex;justify-content: space-between;
-    
-     margin-top: 20px;
+     margin-top: 10px;
 
     .area-btn {
         height:9%;padding: 11px 0 0;
@@ -1134,7 +1139,7 @@ section header {
     }
 
     .tbl-scroll-wrap {
-        height: 83%;
+        height: 100%;
         .tbl-original {
             height: 100%;
             max-height: 100%;
@@ -1145,7 +1150,7 @@ section header {
         }
     }
     
-    [class^=col-] {
+    > [class^=col-] {
         overflow: hidden;
         padding: 0;
         border: 10px solid $bgLightgray3;
@@ -1166,6 +1171,10 @@ section header {
         }
     }
 
+    .tbl-info {
+        padding: 5px 0 0;
+    }
+
     .tbl-scroll-wrap {
         .table thead th {
             padding: 5px 0 2px;
@@ -1182,7 +1191,7 @@ section header {
         dt {
             width: 30%;padding-right: 5%;
             line-height: 41px;
-            font-size: 0.9em;text-align: right;
+            font-size: 0.9em;text-align: right;white-space: nowrap;
         }
         dd {
             width: 70%;
@@ -1211,7 +1220,13 @@ section header {
         }
     }
 
+    &.et0 {
+        flex: 1;
+        margin-bottom: 10px;
+    }
+
     &.et1 {
+        margin-top: auto !important;
         .area-setting {
             &:nth-child(2) {
                 width: 22%;
@@ -1242,6 +1257,7 @@ section header {
     }
 
     &.et2 {
+        margin-top: auto !important;
         dl {
             width: 20%;
             dt {
@@ -1258,6 +1274,7 @@ section header {
 
 
 
+
 .bootstrap-select > .dropdown-toggle {
     background: #fff;
     // height: 33px;
@@ -1265,7 +1282,7 @@ section header {
 
 // icon-map
 .point-map {
-    position: absolute;
+    position: absolute;z-index: 10;
     p  {
         padding: 5px 10px; margin-bottom: .5rem;
         background: #fff;
@@ -1375,5 +1392,123 @@ section header {
 }
 
 .contents-pop {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .table-responsive {
+        flex: 1;
+    }
+    .contents-col2 {
+        position: relative;
+        height: 100%;
+        margin-top: 0;
+    }
+    .col-left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        // padding: 20px;
+        border-radius: 0;
+        background: #fff;
+        border: none;
+    }
+    .col-right {
+        width: calc(100% - 450px);
+        border: none;
+        border-radius: 0;
+    }
+    .area-map {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .tbl-header {
+        margin-bottom: 0;
+        padding: 13px 20px 15px;
+        background: $blue;
+    }
+
+    .area-btn {
+        height: auto;
+        padding: 20px 0;
+        background: none;
+        // height: 20px;
+    }
+    .area-diligence {
+        background: #fff;
+    }
+    .tbl-info {
+        margin-bottom: 0;padding: 17px 0;
+        border: none;
+        background: $bgLightgray;
+        .col-diligence {
+            margin: 0 15px;
+            background: none;
+        }
+    }
+    .tbl-scroll-wrap {
+        position: static;
+        height: auto;
+        .tbl-original {
+            position: absolute;top: 130px;bottom: 0;left: 20px;right: 20px;
+            height: calc(100% - 150px);
+            max-height: none;
+            border-bottom: 1px solid #3d80cf;
+        }
+        .tbl-clone-wrap {
+            position: absolute;top: 130px;left: 20px;right: 20px;
+        }
+    }
+    
+    .shadow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 450px;
+        z-index: 10000;
+        height: 100%;
+        .bar {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            height: 100%;
+            background: url(../../images/map_shadow.png) repeat-y;
+        }
+        .toggle {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 22px;
+            height: 54px;
+            font-size: 0;
+            line-height: 0;
+            background: url(../../images/img_navi.png) no-repeat 0 0;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+    }
+
+    &.collapsed {
+        .col-left {
+            width: 5px;
+        }
+        .col-right {
+            width: 100%;
+        }
+        .shadow {
+            left: 5px;
+            .toggle {
+                height: 62px;
+                background-position: 0 -64px;
+
+            }
+        }
+    }
+
 }

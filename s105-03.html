@@ -49,7 +49,7 @@
           </div>
         </div>
         <!-- Sidebar Navigation Menus-->
-        <div class="main-menu">
+        <div id="gnb" class="main-menu">
           <h5 class="blind">주메뉴</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">
             <li>
@@ -113,7 +113,7 @@
           <h2 class="tit-g">보고 및 승인</h2>
         </header>
         <div class="contents">
-            <div class="table-responsive">
+            <div class="table-responsive pb-500">
                 <table class="tbl-g table table-hori">
                     <tbody>
                         <tr>
@@ -219,7 +219,7 @@
 
                 <div class="tbl-scroll-wrap mt-4">
 
-                  <div class="tbl-original mCustomScrollbar" style="height: 57vh;">
+                  <div class="tbl-original mCustomScrollbar">
                     <table class="tbl-g table">
                       <caption>사진, 번호, 보고시간, 이름, 소속, 단말기번호, 업무내용, 보고위치, 업무상세 목록입니다.</caption>
                       <colgroup>
@@ -319,6 +319,28 @@
                     </table>
                   </div>
       
+                </div>
+
+                <div class="tbl-footer row pos-b">
+                  <div class="col-md-6 text-left">
+                    <span class="txt-join">총 605건 중</span>
+                    <select id="searchType" name="searchType" class="sel-" data-width="fit">
+                      <option value="">10</option>
+                      <option value="">100</option>
+                      <option value="">1,000</option>
+                      <option value="">10,000</option>
+                    </select>
+                    <span class="txt-join">개씩 보기</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <select id="searchType" name="searchType" class="sel-" data-width="fit">
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                    <span class="txt-join">/ 7page</span>
+                  </div>
                 </div>
               
 
