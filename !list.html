@@ -163,6 +163,91 @@
 
   </div>
 
+  <div class="bg-card mt-5">
+    <div class="tbl-header clear-g">
+
+      <form class="form-inline" id="noticeList" name="noticeList">
+
+        <div class="input-datepicker">
+          <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="출퇴근 일자">
+          <i class="fa fa-calendar"></i>
+        </div>
+
+        <div class="c-select">
+          <label for="control" class="blind">관할청</label>
+          <select id="control" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+            <option data-tokens="">관할청</option>
+            <option data-tokens="">환경부</option>
+            <option data-tokens="">한강유역환경청</option>
+            <option data-tokens="">금강유역환경청</option>
+          </select>
+        </div>
+        <div class="c-select">
+          <label for="searchType" class="blind">검색구분</label>
+          <select id="searchType" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+            <option data-tokens="전체">전체</option>
+            <option data-tokens="이름">이름</option>
+            <option data-tokens="단말기 번호">단말기 번호</option>
+          </select>
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="searchKey" name="searchKey" maxlength="20" placeholder="검색어를 입력해주세요."
+            title="검색어" class="int">
+          <i class="fa fa-times-circle form-control-clear hidden"></i>
+        </div>
+        <a href="javascript:;" class="btn- btn-search" maxlength="10" id="btnSearch" name="btnSearch">검색</a>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="bg-card mt-5">
+    <div class="tbl-footer row">
+      <div class="col-md-6 text-left">
+        <span class="txt-join">총 605건 중</span>
+        <select id="searchType" name="searchType" class="sel-" data-width="fit">
+          <option value="">10</option>
+          <option value="">100</option>
+          <option value="">1,000</option>
+          <option value="">10,000</option>
+        </select>
+        <span class="txt-join">개씩 보기</span>
+      </div>
+      <div class="col-md-6 text-right">
+        <select id="searchType" name="searchType" class="sel-" data-width="fit">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+        </select>
+        <span class="txt-join">/ 7page</span>
+      </div>
+    </div>
+
+    <div class="tbl-footer row">
+      <div class="col-md-6 text-left">
+        <span class="txt-join">총 605건 중</span>
+        <select id="searchType" name="searchType" class="sel-" data-width="fit" disabled>
+          <option value="">10</option>
+          <option value="">100</option>
+          <option value="">1,000</option>
+          <option value="">10,000</option>
+        </select>
+        <span class="txt-join">개씩 보기</span>
+      </div>
+      <div class="col-md-6 text-right">
+        <select id="searchType" name="searchType" class="sel-" data-width="fit" disabled>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+        </select>
+        <span class="txt-join">/ 7page</span>
+      </div>
+    </div>
+  </div>
+
     
   </div>
 </body>

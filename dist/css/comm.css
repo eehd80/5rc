@@ -91,7 +91,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10000;
+  z-index: 999;
   border: 1px solid rgba(0, 0, 0, 0.1);
   content: '';
 }
@@ -177,7 +177,10 @@ input[type='text'], input[type='password'], input[type='email'] {
 }
 
 .i-checks {
+  position: relative;
   display: inline-block;
+  width: 25px;
+  height: 25px;
 }
 
 .i-checks input.form-control-custom + label::before {
@@ -188,6 +191,9 @@ input[type='text'], input[type='password'], input[type='email'] {
 }
 
 .i-checks input.form-control-custom + label {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 1rem;
   padding-left: 34px;
   padding-top: 2px;
@@ -196,12 +202,6 @@ input[type='text'], input[type='password'], input[type='email'] {
 .i-checks input.form-control-custom:checked + label::before {
   border: 1px solid #3d80cf !important;
   background: #55a3ff !important;
-}
-
-.i-checks input.form-control-custom + label::after {
-  top: 2px;
-  left: 5px;
-  font-size: 16px;
 }
 
 .card-check {
@@ -282,7 +282,7 @@ input[type='text'], input[type='password'], input[type='email'] {
 
 .side-navbar .sidenav-header {
   overflow: hidden;
-  height: 11vh;
+  height: 110px;
   margin-bottom: 1px;
   padding: 13px 14px 3px;
   background: #3d80cf url(../../images/bg-sidemenu.jpg) 0 0 no-repeat;
@@ -436,6 +436,14 @@ input[type='text'], input[type='password'], input[type='email'] {
   margin-right: 0;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000;
+}
+
 nav.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,7 +451,7 @@ nav.navbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 8vh;
+  height: 80px;
   background: url(../../images/bg-header.jpg) 50% 90% no-repeat;
   background-size: cover;
   padding: 1rem 2.7% .5rem;
@@ -550,6 +558,7 @@ section header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .tbl-scroll-wrap2 {
@@ -720,6 +729,15 @@ section header {
   border: none;
   resize: none;
   background: #F4F7FA;
+}
+
+.table.table-hori .input-box .int {
+  width: 100%;
+}
+
+.table.table-hori .input-datepicker {
+  display: inline-block;
+  width: 152px;
 }
 
 .table-sm {
