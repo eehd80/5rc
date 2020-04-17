@@ -127,40 +127,128 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>관리자이름</th>
+                                <th><label for="name">관리자이름</label></th>
                                 <td>
                                     <div class="input-box">
-                                        <input type="text" id="searchKey" name="searchKey" maxlength="20" title="검색어" class="int">
+                                        <input type="text" id="name" name="name" maxlength="20" title="검색어" class="int">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
                                 </td>
-                                <th>유효기간</th>
+                                <th><label for="expiry">유효기간</label></th>
                                 <td>
                                     <div class="i-checks">
-                                        <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                                        <label for="checkboxCustom2"> <span class="blind">선택</span></label>
+                                        <input id="expiry" type="checkbox" value="" aria-label="유효기간 입력" class="form-control-custom">
                                     </div>
                                     <div class="input-datepicker mr-2">
-                                        <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="보고 시작일" disabled>
+                                        <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" aria-label="유효기간 시작일" disabled>
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <em class="txt-join">~</em>
                                     <div class="input-datepicker">
-                                        <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="보고 시작일" disabled>
+                                        <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" aria-label="유효기간 시작일" disabled>
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>소속강</th>
-                                <td>낙동강 하류</td>
-                                <th>업무일자</th>
-                                <td>2020-04-14</td>
+                                <th><label for="attach">소속</label></th>
+                                <td>
+                                  <div class="c-select">
+                                    
+                                    <select id="attach" name="attach" class="sel-" data-live-search="true" data-width="fit">
+                                      <option data-tokens="">관할청</option>
+                                      <option data-tokens="">환경부</option>
+                                      <option data-tokens="">한강유역환경청</option>
+                                      <option data-tokens="">금강유역환경청</option>
+                                    </select>
+                                  </div>
+                                </td>
+                                <th><label for="tel">전화번호</label></th>
+                                <td>
+                                    <div class="input-box">
+                                        <input type="text" id="tel" name="tel" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <th>관리지역</th>
-                                <td colspan="5">서부권역 본류1-3 </td>
+                                <th><label for="department">부서</label></th>
+                                <td>
+                                  <div class="input-box">
+                                        <input type="text" id="department" name="department" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
+                                <th><label for="pax">팩스</label></th>
+                                <td>
+                                    <div class="input-box">
+                                        <input type="text" id="pax" name="pax" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
                             </tr>
+                            <tr>
+                                <th><label for="id">아이디</label></th>
+                                <td>
+                                  <div class="input-box">
+                                        <input type="text" id="id" name="id" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
+                                <th><label for="email">E-mail</label></th>
+                                <td>
+                                    <div class="input-box">
+                                        <input type="text" id="email" name="email" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="pw">비밀번호</label></th>
+                                <td>
+                                  <div class="input-box">
+                                        <input type="text" id="pw" name="pw" maxlength="11" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
+                                <th>권한</th>
+                                <td>
+                                  <div class="c-select">
+                                    <label for="control" class="blind">관할청</label>
+                                    <select id="control" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+                                      <option data-tokens="">관할청</option>
+                                      <option data-tokens="">환경부</option>
+                                      <option data-tokens="">한강유역환경청</option>
+                                      <option data-tokens="">금강유역환경청</option>
+                                    </select>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사용여부</th>
+                                <td colspan="3">
+                                  <div class="c-select">
+                                    <label for="control" class="blind">관할청</label>
+                                    <select id="control" name="searchType" class="sel-" data-live-search="true" data-width="fit">
+                                      <option data-tokens="">관할청</option>
+                                      <option data-tokens="">환경부</option>
+                                      <option data-tokens="">한강유역환경청</option>
+                                      <option data-tokens="">금강유역환경청</option>
+                                    </select>
+                                  </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th><label for="control">비고</label></th>
+                                <td colspan="3">
+                                  <div class="input-box">
+                                        <input type="text" id="searchKey" name="searchKey" maxlength="11" title="검색어" class="int">
+                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            
                         </tbody>
                     </table>
                 </form>
