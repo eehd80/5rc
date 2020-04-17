@@ -1753,6 +1753,7 @@ section header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding-bottom: 0;
 }
 
 .contents-pop .contents-col2 {
