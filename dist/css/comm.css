@@ -204,6 +204,13 @@ input[type='text'], input[type='password'], input[type='email'] {
   background: #55a3ff !important;
 }
 
+.i-checks input.form-control-custom + label::after {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 16px;
+}
+
 .card-check {
   position: relative;
   margin-top: 60px;
@@ -738,6 +745,11 @@ section header {
 .table.table-hori .input-datepicker {
   display: inline-block;
   width: 152px;
+}
+
+.table.table-hori .i-checks {
+  vertical-align: middle;
+  margin: -6px 5px 0 0;
 }
 
 .table-sm {

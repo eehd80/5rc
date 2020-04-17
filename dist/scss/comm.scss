@@ -145,11 +145,11 @@ input[type='text'], input[type='password'], input[type='email'] {
         border: 1px solid $blue !important;
         background: #55a3ff !important;
     }
-    // input.form-control-custom + label::after {
-    //     position: absolute;
-    //     top: 2px;left: 5px;
-    //     font-size: 16px;
-    // }
+    input.form-control-custom + label::after {
+        position: absolute;
+        top: 2px;left: 5px;
+        font-size: 16px;
+    }
 }
 
 .card-check {
@@ -631,6 +631,11 @@ section header {
         .input-datepicker {
             display: inline-block;
             width: 152px;
+        }
+
+        .i-checks {
+            vertical-align: middle;
+            margin: -6px 5px 0 0;
         }
     }
 }
