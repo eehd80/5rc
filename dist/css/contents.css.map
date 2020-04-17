@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACmDA,cAAc",
+    "sources": [
+        "../scss/contents.scss",
+        "../scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "contents.css"
+}

@@ -1,0 +1,62 @@
+$green: #1C7346;
+$blue: #3d80cf;
+$lightBlue2: rgba(111,179,255,.3);
+$lightBlue : #1369CD;
+$darkBlue : #3a4a5d;
+$red : #e95f71;
+$link : #00c;
+$bgLightgray : #f8f8f8;
+$bgLightgray2 : #F4F7FA;
+$bgLightgray3 : #F5F7FA;
+$bgLightblue : rgb(240, 251, 255);
+$border-color: #c7c7c7;
+$border-color2: #d5d5d5;
+$border-color3: #999;
+$footBg : #222;
+
+$half-w : 20%;
+
+
+@mixin posX {
+ position: absolute;left: 50%;z-index: 1000;
+ transform: translateX(-50%);   
+}
+
+@mixin posY {
+ position: absolute;top: 50%;z-index: 1000;
+ transform: translateY(-50%);   
+}
+@mixin posXY {
+  position: absolute;top: 50%;left:50%;z-index: 1000;
+  transform: translate(-50%, -50%);   
+ }
+
+@mixin ell {
+	display: inline-block;overflow: hidden;
+	text-overflow: ellipsis;white-space: nowrap;vertical-align: middle;
+}
+
+@mixin fontAwe {
+  position: absolute;
+	font-family: 'FontAwesome';
+}
+
+@mixin boxShadow {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@mixin dotum {
+	font-family: 'Dotum';font-size: 0.800rem;
+}
+
+/* clearfix */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
