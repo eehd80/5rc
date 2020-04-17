@@ -1396,7 +1396,7 @@ section header {
     flex-direction: column;
     height: 100vh;
     .table-responsive {
-        flex: 1;
+        flex: 1;padding-bottom: 0;
     }
     .contents-col2 {
         position: relative;
