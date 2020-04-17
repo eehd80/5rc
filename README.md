@@ -1,5 +1,5 @@
 
-# 환경부 환경지킴이 복무관리시스템 [https://eehd80.github.io/5rc/](https://eehd80.github.io/5rc/){: target="_blank"}
+# 환경부 환경지킴이 복무관리시스템
 
 ## 지킴이 활동
 * [공지사항](https://eehd80.github.io/5rc/s101.html){: target="_blank"}
