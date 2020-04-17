@@ -1,29 +1,27 @@
-<<<<<<< HEAD
-=======
-# 환경부 환경지킴이 복무관리시스템 [https://eehd80.github.io/5rc/](https://eehd80.github.io/5rc/)
+
+# 환경부 환경지킴이 복무관리시스템 [https://eehd80.github.io/5rc/](https://eehd80.github.io/5rc/){: target="_blank"}
 
 ## 지킴이 활동
-* [공지사항](https://eehd80.github.io/5rc//s101.html)
-           - [글보기](http://flato.kr/work/5rc/s101-view.html)
-           - [글쓰기](http://flato.kr/work/5rc/s101-write.html)
-* [출퇴근](http://flato.kr/work/5rc/s102.html)
-* [업무보고](http://flato.kr/work/5rc/s103.html)
-* [지킴이 위치](http://flato.kr/work/5rc/s104.html)
-* [보고 및 승인](http://flato.kr/work/5rc/s105.html)
-- [보고](http://flato.kr/work/5rc/s105-01.html)
-- [승인](http://flato.kr/work/5rc/s105-02.html)
-- [보고 및 승인](http://flato.kr/work/5rc/s105-03.html)
-* [복무지역 이탈현황](http://flato.kr/work/5rc/s106.html)
+* [공지사항](https://eehd80.github.io/5rc/s101.html){: target="_blank"}
+           - [글보기](https://eehd80.github.io/5rc/s101-view.html){: target="_blank"}
+           - [글쓰기](https://eehd80.github.io/5rc/s101-write.html){: target="_blank"}
+* [출퇴근](https://eehd80.github.io/5rc/s102.html){: target="_blank"}
+* [업무보고](https://eehd80.github.io/5rc/s103.html){: target="_blank"}
+* [지킴이 위치](https://eehd80.github.io/5rc/s104.html){: target="_blank"}
+* [보고 및 승인](https://eehd80.github.io/5rc/s105.html){: target="_blank"}
+- [보고](https://eehd80.github.io/5rc/s105-01.html){: target="_blank"}
+- [승인](https://eehd80.github.io/5rc/s105-02.html){: target="_blank"}
+- [보고 및 승인](https://eehd80.github.io/5rc/s105-03.html){: target="_blank"}
+* [복무지역 이탈현황](https://eehd80.github.io/5rc/s106.html){: target="_blank"}
 
 ## 통계
-* [메인통계](http://flato.kr/work/5rc/s201.html)
-* [근무현황통계](http://flato.kr/work/5rc/s202.html)
-           - [보기](http://flato.kr/work/5rc/s202-view.html)
-* [업무보고통계](http://flato.kr/work/5rc/s203.html)
-* [월별현황](http://flato.kr/work/5rc/s204.html)
-* [지역별현황](http://flato.kr/work/5rc/s205.html)
+* [메인통계](https://eehd80.github.io/5rc/s201.html){: target="_blank"}
+* [근무현황통계](https://eehd80.github.io/5rc/s202.html){: target="_blank"}
+           - [보기](https://eehd80.github.io/5rc/s202-view.html){: target="_blank"}
+* [업무보고통계](https://eehd80.github.io/5rc/s203.html){: target="_blank"}
+* [월별현황](https://eehd80.github.io/5rc/s204.html){: target="_blank"}
+* [지역별현황](https://eehd80.github.io/5rc/s205.html){: target="_blank"}
 
 ## 설정관리
-* [근무구간](http://flato.kr/work/5rc/s404.html)
-* [복무지역](http://flato.kr/work/5rc/s405.html)
->>>>>>> d25a08f362bfc8bd16990ad5a7d38904c8644c66
+* [근무구간](https://eehd80.github.io/5rc/s404.html){: target="_blank"}
+* [복무지역](https://eehd80.github.io/5rc/s405.html){: target="_blank"}
