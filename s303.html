@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head w3-include-html="head.html">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>환경부 환경지킴이 복무관리시스템</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <link rel="stylesheet" href="./dist/vendor/bootstrap/css/bootstrap.min.css"><!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="./dist/vendor/font-awesome/css/font-awesome.min.css"><!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="./dist/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+  <link rel="stylesheet" href="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css"><!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="./dist/vendor/fancybox/jquery.fancybox.min.css"> <!-- 사진보기 -->
+  <link rel="stylesheet" href="./dist/css/style.css" id="theme-stylesheet">
+  <link rel="stylesheet" href="./dist/css/comm.css">
+  
+</head>
+
+<body>
+  <div id="skipnavigation">
+    <a href="#gnb"><span>주메뉴 바로가기</span></a>
+    <a href="#main"><span>본문 바로가기</span></a>
+  </div>
+  <!-- header -->
+  <header class="header" include-html="./layer/header.html"></header>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center">
+            <h2 class="h5">맥스관리자</h2>
+
+            <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+              <!-- Log out-->
+              <li class="nav-item">
+                <a href="#" class="nav-link logout"> 비밀번호 변경 </a>
+              </li>
+              <li class="nav-item"><a href="login.html" class="nav-link logout"> 로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div id="gnb" class="main-menu">
+          <h5 class="blind">주메뉴</h5>
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <li>
+              <a href="#s1Dropdown" aria-expanded="false" data-toggle="collapse">
+              <i class="fa fa-eye"></i>지킴이 활동 </a>
+              <ul id="s1Dropdown" class="collapse list-unstyled">
+                <li><a href="s101.html">공지사항</a></li>
+                <li><a href="s102.html">출퇴근</a></li>
+                <li><a href="s103.html">업무보고</a></li>
+                <li><a href="s104.html" onclick="window.open(this.href, '_blank', 'toolbars=no,scrollbars=no'); return false;">지킴이 위치</a></li>
+                <li><a href="s105.html">보고 및 승인</a></li>
+                <li><a href="s106.html">복무지역 이탈현황</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#s2Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>통계</a>
+              <ul id="s2Dropdown" class="collapse list-unstyled ">
+                <li><a href="s201.html">메인통계</a></li>
+                <li><a href="s202.html">근무현황통계</a></li>
+                <li><a href="s203.html">업무보고통계</a></li>
+                <li><a href="s204.html">월별현황</a></li>
+                <li><a href="s205.html">지역별현황</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#s3Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리</a>
+              <ul id="s3Dropdown" class="collapse list-unstyled show  ">
+                <li><a href="s301.html">관리자</a></li>
+                <li><a href="s302.html">지킴이</a></li>
+                <li class="on"><a href="s303.html">사용자별 권한관리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#s4Dropdown" aria-expanded="false" data-toggle="collapse" > <i class="fa fa-cog"></i>설정관리 </a>
+              <ul id="s4Dropdown" class="collapse list-unstyled ">
+                <li><a href="s401.html">관리관청</a></li>
+                <li><a href="s402.html">관리강</a></li>
+                <li><a href="s403.html">관리지역</a></li>
+                <li><a href="s404.html">근무구간</a></li>
+                <li><a href="s405.html">복무지역</a></li>
+                <li><a href="s406.html">휴가설정</a></li>
+              </ul>
+            </li>
+            <li><a href="#s5Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-sliders"></i>시스템설정</a>
+              <ul id="s5Dropdown" class="collapse list-unstyled ">
+                <li><a href="s501.html">메뉴등록</a></li>
+                <li><a href="s502.html">권한등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div id="main" class="page">
+    
+    <section>
+      <div class="container-fluid">
+        <!-- Page Header-->
+        <header class="header-col">
+          <h2 class="tit-g">사용자별 권한관리</h2>
+          <div class="area-btn">
+            <a href="s302-write.html" class="btn- btn-blue"><i class="fa fa-plus"></i> 저장</a>
+            <a href="#" class="btn- btn-green"  data-toggle="modal" data-target="#option"><i class="fa fa-plus"></i> 추가옵션</a>
+          </div>
+        </header>
+        <div class="contents">
+            <div class="table-responsive">
+              
+              <div class="contents-col2 et0">
+                <div class="col-left" style="width: 45%;">
+                      
+                      <!-- table -->
+                      <div class=" tbl-scroll-wrap">
+                        <div class="tbl-original mCustomScrollbar">
+                          <table class="tbl-g table">
+                          <caption>번호, 관리자명, 관리자ID, 소속명, 권한그룹, 사용여부 목록입니다.</caption>
+                          <colgroup>
+                              <col width="7%">
+                              <col width="15%">
+                              <col>
+                              <col width="25%">
+                              <col width="15%" span="2">
+                          </colgroup>
+                          <thead>
+                              <tr>
+                                  <th scope="col">번호</th>
+                                  <th scope="col">관리자명</th>
+                                  <th scope="col">관리자ID</th>
+                                  <th scope="col">소속명</th>
+                                  <th scope="col">권한그룹</th>
+                                  <th scope="col">사용여부</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>1</td>
+                                  <td>오다다</td>
+                                  <td>010-1111-1111</td>
+                                  <td>낙동강유역환경청</td>
+                                  <td>지킴이</td>
+                                  <td>사용</td>
+                              </tr>
+                              
+                          </tbody>
+                          </table>
+                    </div>
+                  </div>
+                  <!-- //table -->
+                </div>
+                <div class="col-right" style="width: 54%;">
+                    <!-- table -->
+                    <div class=" tbl-scroll-wrap">
+                        <div class="tbl-original mCustomScrollbar">
+                          <table class="tbl-g table">
+                          <caption>보고항목, 강이름, 지역이름, 보고횟수 목록입니다.</caption>
+                          <colgroup>
+                              <col width="7%">
+                              <col>
+                              <col width="8%" span="5">
+                              <col width="10%" span="2">
+                          </colgroup>
+                          <thead>
+                              <tr>
+                                  <th scope="col">
+                                    <input type="checkbox" class="checkbox-">
+                                  </th>
+                                  <th scope="col">메뉴명</th>
+                                  <th scope="col">신규</th>
+                                  <th scope="col">수정</th>
+                                  <th scope="col">삭제</th>
+                                  <th scope="col">엑셀</th>
+                                  <th scope="col">추가옵션</th>
+                                  <th scope="col">설정</th>
+                                  <th scope="col">가능</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-" disabled></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>지킴이활동</td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>0</td>
+                                  <td>15</td>
+                              </tr>
+                              
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+                  <!-- //table -->
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal layer" id="option" style="display: block; ">
+    <div class="modal-dialog" style="width: 500px;">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">추가옵션설정</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table">
+            <colgroup>
+              <col width="20%">
+              <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th><input type="checkbox" class="checkbox-"></th>
+              <th>추가옵션명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td><input type="checkbox" class="checkbox-"></td>
+              <td class="text-left">중앙청 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-"></td>
+              <td class="text-left">유역정 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-"></td>
+              <td class="text-left">대권역 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-"></td>
+              <td class="text-left">중권역 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-"></td>
+              <td class="text-left">일자별 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(출근) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(퇴근) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(계도) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(정화활동) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(주민교육/홍보) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(회의참석) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(순찰) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(특성화사업) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">업무구분(기타) 조회</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox-" checked></td>
+              <td class="text-left">퇴근취소</td>
+            </tr>
+            
+        </tbody>
+          </table>
+          
+          <!-- table -->
+          <div class=" tbl-scroll-wrap" style="height: 92%;">
+            <div class="tbl-original mCustomScrollbar">
+              <table class="tbl-g table">
+                <caption>번호, 이름, 소속, 단말기번호, 출근시간, 퇴근시간, 근무시간, 비고 목록입니다.</caption>
+                <colgroup>
+                  <col width="30%">
+                  <col width="15%">
+                  <col>
+                  <col width="15%" span="2">
+                </colgroup>
+                <thead>
+                  <tr>
+                      <th scope="col">일시</th>
+                      <th scope="col">상태</th>
+                      <th scope="col">위치(주소)</th>
+                      <th scope="col">이동거리</th>
+                      <th scope="col">보고구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  <tr>
+                      <td>2020-03-16 08:39:58</td>
+                      <td>정 상</td>
+                      <td><span class="ell">충남 공주시 장기면</span></td>
+                      <td>0</td>
+                      <td>출근</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript files-->
+  <script src="./dist/vendor/jquery/jquery.min.js"></script>
+  <script src="./dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+  <script src="./dist/vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="./dist/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./dist/vendor/summernote/summernote-bs4.min.js"></script> <!-- Summernote-->
+  <script src="./dist/js/include.js"></script>
+  <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"> </script> <!-- MultiSelect -->
+  <script src="./dist/vendor/bootstrap-datepicker/js/bootstrap-datepicker.kr.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script src="./dist/vendor/fancybox/jquery.fancybox.min.js"></script> <!-- fancy gallery -->
+  <script src="./dist/js/front.js"></script>  <!-- Main File-->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</body>
+</html>

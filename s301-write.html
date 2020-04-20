@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="./dist/vendor/fancybox/jquery.fancybox.min.css"> <!-- 사진보기 -->
   <link rel="stylesheet" href="./dist/css/style.css" id="theme-stylesheet">
   <link rel="stylesheet" href="./dist/css/comm.css">
-  <link rel="shortcut icon" href="./images/favicon.ico">
+  
 </head>
 
 <body>
@@ -130,7 +130,7 @@
                                 <th><label for="name">관리자이름</label></th>
                                 <td>
                                     <div class="input-box">
-                                        <input type="text" id="name" name="name" maxlength="20" title="검색어" class="int">
+                                        <input type="text" id="name" name="name" maxlength="20" class="int">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
                                 </td>
@@ -138,7 +138,7 @@
                                 <td>
                                   <div class="i-checks">
                                     <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-                                    <label for="checkboxCustom1"> <span class="blind">승인</span></label>
+                                    <label for="checkboxCustom1"> <span class="blind">유효기간</span></label>
                                   </div>
                                     <div class="input-datepicker mr-2">
                                         <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" aria-label="유효기간 시작일" disabled>
@@ -167,7 +167,7 @@
                                 <th><label for="tel">전화번호</label></th>
                                 <td>
                                     <div class="input-box">
-                                        <input type="text" id="tel" name="tel" maxlength="11" class="int">
+                                        <input type="number" id="tel" name="tel" maxlength="11" class="int">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
                                 </td>
@@ -183,7 +183,7 @@
                                 <th><label for="pax">팩스</label></th>
                                 <td>
                                     <div class="input-box">
-                                        <input type="text" id="pax" name="pax" maxlength="11" class="int">
+                                        <input type="number" id="pax" name="pax" maxlength="11" class="int">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
                                 </td>
@@ -195,7 +195,7 @@
                                         <input type="text" id="id" name="id" maxlength="11" class="int">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
-                                    <a href="#" class="link-s link-blue">중복확인</a>
+                                    <a href="#" class="link-s link-blue" aria-label="새창이동">중복확인</a>
                                 </td>
                                 <th><label for="email">E-mail</label></th>
                                 <td>

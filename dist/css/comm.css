@@ -97,8 +97,16 @@ a:hover {
   right: 0;
 }
 
-input[type=password] {
-  font-family: 'Malgun Gothic';
+.w100 {
+  width: 100% !important;
+}
+
+.w35 {
+  width: 35%;
+}
+
+.w70 {
+  width: 70%;
 }
 
 .img-object {
@@ -203,7 +211,15 @@ input[type=password] {
   margin-right: 5px;
 }
 
-input[type='text'], input[type='password'], input[type='email'] {
+.checkbox- {
+  height: 22px;
+}
+
+input[type=password] {
+  font-family: 'Malgun Gothic';
+}
+
+input {
   display: inline-block;
   height: 37px;
   margin: 0;
@@ -211,6 +227,15 @@ input[type='text'], input[type='password'], input[type='email'] {
   font-size: 1rem;
   color: #333;
   vertical-align: top;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input:focus {
+  background: #f0fbff;
+  border: 1px solid #1369CD;
 }
 
 textarea {
@@ -289,10 +314,6 @@ textarea {
 
 .btn {
   padding: 0 .75rem;
-}
-
-.w100 {
-  width: 100% !important;
 }
 
 .sel- {
@@ -780,6 +801,7 @@ section header {
   height: 52px;
   padding-left: 15px;
   text-align: left;
+  font-size: 1.05rem;
 }
 
 .table.table-hori tbody td .row- {
@@ -801,18 +823,6 @@ section header {
 
 .table.table-hori tbody td span.off {
   background: #fff;
-}
-
-.table.table-hori .d-flex .input-box {
-  width: 50%;
-}
-
-.table.table-hori .d-flex .link-s {
-  line-height: 2.1;
-}
-
-.table.table-hori .c-select {
-  width: 50%;
 }
 
 .table.table-hori .row- {
@@ -840,11 +850,30 @@ section header {
 }
 
 .table.table-hori .input-box {
+  display: inline-block;
   margin-right: 0;
 }
 
-.table.table-hori .input-box .int {
+.table.table-hori .input-box, .table.table-hori .c-select {
+  width: 70%;
+}
+
+.table.table-hori .input-box.sel-et, .table.table-hori .c-select.sel-et {
+  width: auto;
+}
+
+.table.table-hori .input-box .int, .table.table-hori .c-select .int {
   width: 100%;
+}
+
+.table.table-hori .int-address {
+  width: 34.5%;
+}
+
+.table.table-hori .link-s {
+  margin: 0 0 0 5px;
+  padding: 7px 5px 5px;
+  font-size: 0.9rem;
 }
 
 .table.table-hori .input-datepicker {
@@ -974,13 +1003,8 @@ section header {
   border-radius: 0;
 }
 
-.modal .modal-header {
-  height: 6vh;
-}
-
 .modal .modal-body {
   overflow: hidden;
-  height: 90vh;
   padding: 0;
 }
 
@@ -1011,6 +1035,10 @@ section header {
 
 .modal.layer .modal-body {
   height: auto;
+}
+
+.modal.layer .modal-body .table {
+  margin-bottom: 0;
 }
 
 .form-write {
@@ -1231,17 +1259,17 @@ section header {
   color: #e95f71;
 }
 
-.input-box input[type="text"], .input-box input[type="password"], .input-box input[type="email"] {
+.input-box input {
   padding: 0 10px;
   width: 235px;
   border: 1px solid #c7c7c7;
 }
 
-.input-box input[type="text"]::-ms-clear, .input-box input[type="password"]::-ms-clear, .input-box input[type="email"]::-ms-clear {
+.input-box input::-ms-clear {
   display: none;
 }
 
-.input-box input[type="text"]:focus, .input-box input[type="password"]:focus, .input-box input[type="email"]:focus {
+.input-box input:focus {
   background: #f0fbff;
   border: 1px solid #1369CD;
 }
@@ -1456,6 +1484,14 @@ section header {
   height: 100%;
 }
 
+.contents-col2 .tbl-scroll-wrap .table thead th {
+  padding: 6px 0 4px;
+}
+
+.contents-col2 .tbl-scroll-wrap td {
+  padding: 6px 0 4px;
+}
+
 .contents-col2 > [class^=col-] {
   overflow: hidden;
   padding: 0;
@@ -1487,14 +1523,6 @@ section header {
 
 .contents-col2 .tbl-info {
   padding: 5px 0 0;
-}
-
-.contents-col2 .tbl-scroll-wrap .table thead th {
-  padding: 5px 0 2px;
-}
-
-.contents-col2 .tbl-scroll-wrap td {
-  padding: 5px 0 2px;
 }
 
 .contents-col2 .area-setting {

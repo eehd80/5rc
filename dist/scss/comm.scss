@@ -34,9 +34,9 @@ a {
 }
 .pos-center {@include posXY;z-index: 1;}
 .pos-b {position: absolute;bottom: 20px;left: 0;right: 0;}
-input[type=password] {
-    font-family: 'Malgun Gothic';
-}
+.w100 {width: 100% !important;}
+.w35 {width: 35%;}
+.w70 {width: 70%;}
 
 // comm
 .img-object {
@@ -124,7 +124,11 @@ input[type=password] {
 
 
 // input
-input[type='text'], input[type='password'], input[type='email'] {
+.checkbox- {
+    height: 22px;
+}
+input[type=password] {font-family: 'Malgun Gothic';}
+input {
     display: inline-block;
     height: 37px;
     margin: 0;
@@ -139,6 +143,13 @@ input[type='text'], input[type='password'], input[type='email'] {
     //     border: 1px solid $blue !important;
     //     background: #55a3ff !important;
     // }
+    &::-ms-clear {
+        display: none;
+    }
+    &:focus {
+        background: $bgLightblue;
+        border: 1px solid $lightBlue;
+    }
 }
 textarea {
     padding: 10px;
@@ -213,9 +224,6 @@ textarea {
 }
 .btn {
     padding: 0 .75rem;
-}
-.w100 {
-    width: 100% !important;
 }
 .sel- {
     padding: 0;
@@ -618,6 +626,7 @@ section header {
             height: 52px;
             padding-left: 15px;
             text-align: left;
+            font-size: 1.05rem;
             .row- {
                 white-space: normal;
             }
@@ -630,17 +639,6 @@ section header {
                     background: #fff;
                 }
             }
-        }
-        .d-flex {
-            .input-box {
-                width: 50%;
-            }
-            .link-s {
-                line-height: 2.1;
-            }
-        }
-        .c-select {
-            width: 50%;
         }
         .row- {
             display: flex;
@@ -659,13 +657,24 @@ section header {
             }
         }
         .input-box {
+            display: inline-block;
             margin-right: 0;
         }
-
-        .input-box {
+        .input-box, .c-select {
+            width: 70%;
+            &.sel-et {
+                width:auto;
+            }
             .int {
                 width: 100%;
             }
+        }
+        .int-address {
+            width: 34.5%;
+        }
+        .link-s {
+            margin: 0 0 0 5px; padding: 7px 5px 5px;
+            font-size: 0.9rem;
         }
 
         .input-datepicker {
@@ -771,12 +780,8 @@ section header {
         height: 100vh;
         border-radius: 0;
     }
-    .modal-header {
-        height: 6vh;
-    }
     .modal-body {
         overflow: hidden;
-        height: 90vh;
         padding: 0;
         img {
             width: 100%; object-fit: cover;object-position: center;
@@ -797,6 +802,9 @@ section header {
     }
     .modal-body {
         height: auto;
+        .table {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -969,7 +977,7 @@ section header {
       }
   }
 
-  input[type="text"], input[type="password"], input[type="email"] {
+  input{
     padding: 0 10px;
     width: 235px;
   //   height: calc(100% + 5px);
@@ -1182,6 +1190,12 @@ section header {
         &.h100 {
             height: 100%;
         }
+        .table thead th {
+            padding: 6px 0 4px;
+        }
+        td {
+            padding: 6px 0 4px;
+        }
     }
     
     > [class^=col-] {
@@ -1207,15 +1221,6 @@ section header {
 
     .tbl-info {
         padding: 5px 0 0;
-    }
-
-    .tbl-scroll-wrap {
-        .table thead th {
-            padding: 5px 0 2px;
-        }
-        td {
-            padding: 5px 0 2px;
-        }
     }
 
     .area-setting {
