@@ -74,8 +74,8 @@
             <li>
               <a href="#s3Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리</a>
               <ul id="s3Dropdown" class="collapse list-unstyled show  ">
-                <li class="on"><a href="s301.html">관리자</a></li>
-                <li><a href="s302.html">지킴이</a></li>
+                <li><a href="s301.html">관리자</a></li>
+                <li class="on"><a href="s302.html">지킴이</a></li>
                 <li><a href="s303.html">사용자별 권한관리</a></li>
               </ul>
             </li>
@@ -107,9 +107,10 @@
       <div class="container-fluid">
         <!-- Page Header-->
         <header class="header-col">
-          <h2 class="tit-g">출퇴근</h2>
+          <h2 class="tit-g">지킴이</h2>
           <div class="area-btn">
-            <a href="s301-write.html" class="btn- btn-blue"><i class="fa fa-pencil"></i> 신규</a>
+            <a href="s101-write.html" class="btn- btn-blue"><i class="fa fa-pencil"></i> 신규</a>
+            <a href="s101-write.html" class="btn- btn-green"><i class="fa fa-file-excel-o"></i> 엑셀</a>
           </div>
         </header>
         <div class="contents">
@@ -129,11 +130,20 @@
                       </div>
                   <div class="c-select">
                     <label for="control" class="blind">관할청</label>
-                    <select id="control" name="control" class="sel-" data-live-search="true" data-width="fit">
+                    <select id="control" name="searchType" class="sel-" data-live-search="true" data-width="fit">
                       <option data-tokens="">관할청</option>
                       <option data-tokens="">환경부</option>
                       <option data-tokens="">한강유역환경청</option>
                       <option data-tokens="">금강유역환경청</option>
+                    </select>
+                  </div>
+                  <div class="c-select">
+                    <label for="controlArea" class="blind">관리지역</label>
+                    <select id="controlArea" name="controlArea" class="sel-" data-live-search="true" data-width="fit">
+                      <option data-tokens="">관리지역 - 전체</option>
+                      <option data-tokens="">관리지역1</option>
+                      <option data-tokens="">관리지역2</option>
+                      <option data-tokens="">관리지역3</option>
                     </select>
                   </div>
                   <div class="c-select">
@@ -159,29 +169,73 @@
                 <table class="tbl-g table">
                   <caption>번호, 아이디, 이름, 소속, 권한, 사용여부 목록입니다.</caption>
                   <colgroup>
+                    <col width="7%">
                     <col width="10%">
-                    <col width="20%" span="2">
                     <col>
-                    <col width="20%">
-                    <col width="10%">
+                    <col width="15%" span="4">
+                    <col width="8%">
                   </colgroup>
                   <thead>
                     <tr>
                       <th scope="col">번호</th>
-                      <th scope="col">아이디</th>
                       <th scope="col">이름</th>
                       <th scope="col">소속</th>
-                      <th scope="col">권한</th>
+                      <th scope="col">단말기번호</th>
+                      <th scope="col">소속권역</th>
+                      <th scope="col">관리지역</th>
+                      <th scope="col">긴급전화</th>
                       <th scope="col">사용여부</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr onClick="location.href='s301-view.html'">
+                    <tr onClick="location.href='s302-view.html'">
                       <td>2112</td>
-                      <td>nehalfeo</td>
                       <td>기만국</td>
                       <td>금강유역환경청</td>
-                      <td>유역청관리자</td>
+                      <td>010-3333-5555</td>
+                      <td>금강하류</td>
+                      <td>강화도</td>
+                      <td>02-4553-5624</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr onClick="location.href='s302-view.html'">
+                      <td>2112</td>
+                      <td>기만국</td>
+                      <td>금강유역환경청</td>
+                      <td>010-3333-5555</td>
+                      <td>금강하류</td>
+                      <td>강화도</td>
+                      <td>02-4553-5624</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr onClick="location.href='s302-view.html'">
+                      <td>2112</td>
+                      <td>기만국</td>
+                      <td>금강유역환경청</td>
+                      <td>010-3333-5555</td>
+                      <td>금강하류</td>
+                      <td>강화도</td>
+                      <td>02-4553-5624</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr onClick="location.href='s302-view.html'">
+                      <td>2112</td>
+                      <td>기만국</td>
+                      <td>금강유역환경청</td>
+                      <td>010-3333-5555</td>
+                      <td>금강하류</td>
+                      <td>강화도</td>
+                      <td>02-4553-5624</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr onClick="location.href='s302-view.html'">
+                      <td>2112</td>
+                      <td>기만국</td>
+                      <td>금강유역환경청</td>
+                      <td>010-3333-5555</td>
+                      <td>금강하류</td>
+                      <td>강화도</td>
+                      <td>02-4553-5624</td>
                       <td>사용</td>
                     </tr>
                   </tbody>

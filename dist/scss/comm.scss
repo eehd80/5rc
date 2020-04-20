@@ -34,7 +34,9 @@ a {
 }
 .pos-center {@include posXY;z-index: 1;}
 .pos-b {position: absolute;bottom: 20px;left: 0;right: 0;}
-
+input[type=password] {
+    font-family: 'Malgun Gothic';
+}
 
 // comm
 .img-object {
@@ -133,6 +135,14 @@ input[type='text'], input[type='password'], input[type='email'] {
     color: #333;
     // line-height: 35px;
     vertical-align: top;
+    // &:checked {
+    //     border: 1px solid $blue !important;
+    //     background: #55a3ff !important;
+    // }
+}
+textarea {
+    padding: 10px;
+    border: 1px solid $border-color;
 }
 .i-checks {
     $w : 20px;
@@ -157,7 +167,7 @@ input[type='text'], input[type='password'], input[type='email'] {
     }
     input.form-control-custom + label::after {
         position: absolute;
-        top: 3px;left: 5px;
+        top: 3px;left: 4px;
         font-size: 12px;
     }
 }
@@ -186,6 +196,20 @@ input[type='text'], input[type='password'], input[type='email'] {
 
 .c-select {
     // border: 1px solid $border-color;
+    .dropdown-menu li {
+        a {
+            &:hover {
+                color: $blue;
+            }
+            // padding: .1em 1em;
+            span.text {
+                overflow: visible;
+                width: 100%;margin: 0;padding: 0;
+                background: #fff;
+                text-overflow: clip;
+            }
+        }
+    }
 }
 .btn {
     padding: 0 .75rem;
@@ -255,11 +279,6 @@ input[type='text'], input[type='password'], input[type='email'] {
     }
 }
 
-@media (max-width: 1199px){
-    .side-navbar {
-        left: 0;
-    }
-}
 
 .side-menu {
     > li {
@@ -595,8 +614,9 @@ section header {
             cursor: default;
             background: #fff;
         }
-        td {
-            padding-left: 1%;
+        tbody td {
+            height: 52px;
+            padding-left: 15px;
             text-align: left;
             .row- {
                 white-space: normal;
@@ -610,6 +630,17 @@ section header {
                     background: #fff;
                 }
             }
+        }
+        .d-flex {
+            .input-box {
+                width: 50%;
+            }
+            .link-s {
+                line-height: 2.1;
+            }
+        }
+        .c-select {
+            width: 50%;
         }
         .row- {
             display: flex;
@@ -626,6 +657,9 @@ section header {
                 resize: none;
                 background: $bgLightgray2;
             }
+        }
+        .input-box {
+            margin-right: 0;
         }
 
         .input-box {
@@ -935,7 +969,7 @@ section header {
       }
   }
 
-  input[type="text"] {
+  input[type="text"], input[type="password"], input[type="email"] {
     padding: 0 10px;
     width: 235px;
   //   height: calc(100% + 5px);
@@ -1509,6 +1543,50 @@ section header {
 
             }
         }
+    }
+
+}
+
+@media (max-width: 1199px) {
+    #main.page {
+        width: calc(100% - 100px);
+    }
+    .side-navbar {
+        left: 0;
+        width: 100px;
+    }
+    .side-menu > li ul li::before {
+        display: none;
+    }
+    .side-menu > li ul.collapsing a, .side-menu > li ul.collapse a {
+        padding: 5px 2px;
+        font-size: 0.7rem;
+        border-left:none;
+    }
+    .side-navbar ul li a, .side-navbar ul li a:hover {
+        box-sizing: border-box;
+    }
+    .side-navbar .sidenav-header {
+        padding: 0;
+    }
+    .side-navbar .sidenav-header-inner {
+        display: block;
+    }
+    .side-navbar .sidenav-header h2 {
+        margin-top: 28px;
+        font-size: 0.9rem;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        margin-top: 8px;
+        li {
+            width: 90%;
+            margin: 3px auto;
+        }
+    }
+    .nav-menu .nav-link {
+        padding: 2px 0;
+        font-size: 0.7rem;
     }
 
 }

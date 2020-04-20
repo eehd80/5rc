@@ -97,6 +97,10 @@ a:hover {
   right: 0;
 }
 
+input[type=password] {
+  font-family: 'Malgun Gothic';
+}
+
 .img-object {
   overflow: hidden;
   position: relative;
@@ -209,6 +213,11 @@ input[type='text'], input[type='password'], input[type='email'] {
   vertical-align: top;
 }
 
+textarea {
+  padding: 10px;
+  border: 1px solid #c7c7c7;
+}
+
 .i-checks {
   position: relative;
   display: inline-block;
@@ -240,7 +249,7 @@ input[type='text'], input[type='password'], input[type='email'] {
 .i-checks input.form-control-custom + label::after {
   position: absolute;
   top: 3px;
-  left: 5px;
+  left: 4px;
   font-size: 12px;
 }
 
@@ -263,6 +272,19 @@ input[type='text'], input[type='password'], input[type='email'] {
   font-size: 1rem;
   color: #333;
   vertical-align: top;
+}
+
+.c-select .dropdown-menu li a:hover {
+  color: #3d80cf;
+}
+
+.c-select .dropdown-menu li a span.text {
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  text-overflow: clip;
 }
 
 .btn {
@@ -338,12 +360,6 @@ input[type='text'], input[type='password'], input[type='email'] {
 .side-navbar .sidenav-header span {
   color: #fff;
   opacity: 0.5;
-}
-
-@media (max-width: 1199px) {
-  .side-navbar {
-    left: 0;
-  }
 }
 
 .side-menu > li {
@@ -760,16 +776,17 @@ section header {
   background: #fff;
 }
 
-.table.table-hori td {
-  padding-left: 1%;
+.table.table-hori tbody td {
+  height: 52px;
+  padding-left: 15px;
   text-align: left;
 }
 
-.table.table-hori td .row- {
+.table.table-hori tbody td .row- {
   white-space: normal;
 }
 
-.table.table-hori td span {
+.table.table-hori tbody td span {
   display: block;
   width: 90%;
   margin-bottom: 3px;
@@ -782,8 +799,20 @@ section header {
   vertical-align: middle;
 }
 
-.table.table-hori td span.off {
+.table.table-hori tbody td span.off {
   background: #fff;
+}
+
+.table.table-hori .d-flex .input-box {
+  width: 50%;
+}
+
+.table.table-hori .d-flex .link-s {
+  line-height: 2.1;
+}
+
+.table.table-hori .c-select {
+  width: 50%;
 }
 
 .table.table-hori .row- {
@@ -808,6 +837,10 @@ section header {
   border: none;
   resize: none;
   background: #F4F7FA;
+}
+
+.table.table-hori .input-box {
+  margin-right: 0;
 }
 
 .table.table-hori .input-box .int {
@@ -1198,17 +1231,17 @@ section header {
   color: #e95f71;
 }
 
-.input-box input[type="text"] {
+.input-box input[type="text"], .input-box input[type="password"], .input-box input[type="email"] {
   padding: 0 10px;
   width: 235px;
   border: 1px solid #c7c7c7;
 }
 
-.input-box input[type="text"]::-ms-clear {
+.input-box input[type="text"]::-ms-clear, .input-box input[type="password"]::-ms-clear, .input-box input[type="email"]::-ms-clear {
   display: none;
 }
 
-.input-box input[type="text"]:focus {
+.input-box input[type="text"]:focus, .input-box input[type="password"]:focus, .input-box input[type="email"]:focus {
   background: #f0fbff;
   border: 1px solid #1369CD;
 }
@@ -1889,5 +1922,50 @@ section header {
 .contents-pop.collapsed .shadow .toggle {
   height: 62px;
   background-position: 0 -64px;
+}
+
+@media (max-width: 1199px) {
+  #main.page {
+    width: calc(100% - 100px);
+  }
+  .side-navbar {
+    left: 0;
+    width: 100px;
+  }
+  .side-menu > li ul li::before {
+    display: none;
+  }
+  .side-menu > li ul.collapsing a, .side-menu > li ul.collapse a {
+    padding: 5px 2px;
+    font-size: 0.7rem;
+    border-left: none;
+  }
+  .side-navbar ul li a, .side-navbar ul li a:hover {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .side-navbar .sidenav-header {
+    padding: 0;
+  }
+  .side-navbar .sidenav-header-inner {
+    display: block;
+  }
+  .side-navbar .sidenav-header h2 {
+    margin-top: 28px;
+    font-size: 0.9rem;
+  }
+  .nav-menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .nav-menu li {
+    width: 90%;
+    margin: 3px auto;
+  }
+  .nav-menu .nav-link {
+    padding: 2px 0;
+    font-size: 0.7rem;
+  }
 }
 /*# sourceMappingURL=comm.css.map */
