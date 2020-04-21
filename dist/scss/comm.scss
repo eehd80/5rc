@@ -3,7 +3,7 @@
 @import 'variables';
 
 // reset 
-* {box-sizing: border-box;}
+* {box-sizing: border-box;list-style: none;}
 a {
     color: $blue;
     text-decoration: none;
@@ -203,6 +203,16 @@ textarea {
     color: #333;
     // line-height: 35px;
     vertical-align: top;
+    .dropdown-divider {
+        display: none;
+    }
+    
+}
+.bootstrap-select .dropdown-menu li a {
+    padding: .3rem 1rem;
+}
+.bootstrap-select .dropdown-menu li a.opt, .dropdown-header  {
+    padding-left: 1rem;
 }
 
 .c-select {
@@ -349,12 +359,12 @@ textarea {
             li {
                 position: relative;
                 &::before {
-                    position: absolute;top: 15px; left: 25px;
+                    position: absolute;top: 15px; left: 25px;z-index: 10;
                     @include fontAwe;
                     content: "\f0da";
                     font-size: .6em;
                     color: $darkBlue;
-                    opacity: .1;
+                    opacity: .3;
                 }
                 &.on::before {
                     opacity: 1;
@@ -362,7 +372,7 @@ textarea {
             }
             &.collapsing a, &.collapse a {
                 padding-left: 42px;
-                border-left: 2px solid $blue;
+                border-left: 2px solid #3a4a5d;
                 color: #000;
                 font-size: 0.95rem;
                 background: #f7f7f7;
@@ -576,7 +586,7 @@ section header {
         color: #fff;
         vertical-align: middle !important;text-align: center;
         border-right: 1px solid #fff !important;
-        border-bottom: 1px solid #1469cd;
+        border-bottom: 1px solid rgba(255,255,255,.3);
         &:last-child {
             border-right: none !important;
         }
@@ -618,6 +628,12 @@ section header {
 
     &.table-hori {
         border-top: 1px solid $blue;
+        &.table-col3 {
+            .input-box {
+                width: 100%;
+            }
+        }
+
         tr:hover td {
             cursor: default;
             background: #fff;
@@ -670,7 +686,7 @@ section header {
             }
         }
         .int-address {
-            width: 34.5%;
+            width: 34.8%;
         }
         .link-s {
             margin: 0 0 0 5px; padding: 7px 5px 5px;
@@ -686,6 +702,8 @@ section header {
             vertical-align: middle;
             margin: -6px 5px 0 0;
         }
+        
+        
     }
 }
 
@@ -708,6 +726,10 @@ section header {
             border-left: 1px solid #dee2e6;
         }
     }
+}
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    height: 100%;
 }
 
 .map-object {
@@ -793,8 +815,8 @@ section header {
     background: rgba(0,0,0,.5);
     .modal-dialog {
         width: auto;height: auto;
-        max-width: 70%; height: 70vh;
-        margin: 30px auto 0;
+        max-width: 70%; 
+        margin: 100px auto 0;
     }
     .modal-content {
         height: auto;
@@ -803,8 +825,23 @@ section header {
     .modal-body {
         height: auto;
         .table {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
+            tr {
+                cursor: default
+            }
         }
+    }
+    .sel-break {
+        width: 70%;height: 120px; margin: auto; padding: 10px;
+        border: 1px solid $border-color;
+        option {
+            padding: 3px 0;
+        }
+    }
+    .modal-vacation {
+        display: flex; justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
     }
 }
 
@@ -1594,4 +1631,77 @@ section header {
         font-size: 0.7rem;
     }
 
+}
+
+.calendar- {
+    display: flex; flex-direction: column;
+    height: 100%;
+    .row- {
+        display: flex;
+        margin: 0;padding: 0;
+        font-size: 0.9rem;
+        li {
+            flex: 1 1 0;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    .row-week {
+        color: #fff; 
+        li {
+            padding: 5px 0;
+            border-right: 1px solid rgba(255,255,255,.5);
+            background: #999;
+            &:first-child {
+                background: $red;
+            }
+            &:last-child {
+                background: $blue;
+            }
+        }
+    }
+    .area-calendar {
+        display: flex;flex-direction: column;
+        flex: 1;
+        height: 100%;padding: 5px 0;
+        .row- {
+            flex: 1;
+            > li {
+                padding: 5px 3px;
+                border-right: 1px solid rgba($border-color,.5);
+                cursor: pointer;
+                &.today {
+                    h3 {
+                        background: $red;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        
+        h3 {
+            position: relative;
+            padding: 3px 0 2px;
+            background: rgba(228, 228, 228, 1);
+            border-radius: 3px;
+            font-size: .9rem; 
+            // &::before {
+            //     top: 2px;right: 30px;
+            //     content: "\f292";
+            //     @include fontAwe;
+            //     font-size: 0.8rem;
+            // }
+        }
+        dl {
+            display: flex; flex-wrap: wrap;
+            width: 90%;margin: 0 auto;padding: 5px 0;
+            dt {
+                width: 40%;
+            }
+            dd {
+                width: 60%;
+            }
+        }
+    }
 }

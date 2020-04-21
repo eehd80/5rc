@@ -128,7 +128,12 @@
                         <tbody>
                             <tr>
                                 <th><label for="name">이름</label></th>
-                                <td>odada</td>
+                                <td>
+                                  <div class="input-box">
+                                    <input type="text" id="name" name="name" maxlength="11" class="int" value="odada">
+                                    <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                </div>
+                                </td>
                                 <th><label for="attach">소속</label></th>
                                 <td>
                                   <div class="c-select">
@@ -145,10 +150,10 @@
                                 <th><label for="phone">단말기번호</label></th>
                                 <td>
                                     <div class="input-box">
-                                          <input type="number" id="phone" name="phone" maxlength="11" class="int" placeholder="010-2222-3333">
+                                          <input type="number" id="phone" name="phone" maxlength="11" class="int" value="01022223333">
                                           <i class="fa fa-times-circle form-control-clear hidden"></i>
                                       </div>
-                                      <a href="#" class="link-s link-blue" aria-label="새창이동">중복확인</a>
+                                      <!-- <a href="#" class="link-s link-blue" aria-label="새창이동">중복확인</a> -->
                                   </td>
                                 <th><label for="attachArea">소속권역</label></th>
                                 <td>
@@ -185,10 +190,10 @@
                                 <th><label for="id">Web ID</label></th>
                                 <td>
                                   <div class="input-box">
-                                        <input type="text" id="id" name="id" maxlength="11" class="int" placeholder="010-2222-3333">
+                                        <input type="text" id="id" name="id" maxlength="11" class="int" value="01022223333">
                                         <i class="fa fa-times-circle form-control-clear hidden"></i>
                                     </div>
-                                    <a href="#" class="link-s link-blue" aria-label="새창이동">중복확인</a>
+                                    <!-- <a href="#" class="link-s link-blue" aria-label="새창이동">중복확인</a> -->
                                 </td>
                                 <th><label for="expiry">유효기간</label></th>
                                 <td>
@@ -229,19 +234,22 @@
                             </tr>
                             <tr>
                                 <th><label for="memberAddress">주소</label></th>
-                                <td>
-                                    <input type="text" name="memberAddress" id="memberAddress" class="int int-address mb-1" aria-label="우편번호">
+                                <td colspan="3">
+                                    <input type="text" name="memberAddress" id="memberAddress" class="int int-address mb-1" aria-label="우편번호" value="32912">
                                     <a href="#" class="link-s link-blue" aria-label="새창이동">우편번호</a><br>
-                                    <input type="text" name="memberAddress" id="memberAddress2" class="int int-address" aria-label="주소">
-                                    <input type="text" name="memberAddress" id="memberAddress3" class="int int-address" aria-label="상세주소">
+                                    <input type="text" name="memberAddress" id="memberAddress2" class="int int-address" aria-label="주소" value="인천광역시 강화군 고려산로">
+                                    <input type="text" name="memberAddress" id="memberAddress3" class="int int-address" aria-label="상세주소" value="89-12">
                                   </td>
-                                <th><label for="email">E-mail</label></th>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="email" id="email" name="email" maxlength="30" class="int">
-                                        <i class="fa fa-times-circle form-control-clear hidden"></i>
-                                    </div>
-                                </td>
+                                
+                            </tr>
+                            <tr>
+                              <th><label for="email">이메일</label></th>
+                              <td colspan="3">
+                                  <div class="input-box">
+                                      <input type="email" id="email" name="email" maxlength="30" class="int" value="eeee@haver.com">
+                                      <i class="fa fa-times-circle form-control-clear hidden"></i>
+                                  </div>
+                              </td>
                             </tr>
                             <tr>
                               <th><label for="note">비고</label></th>
