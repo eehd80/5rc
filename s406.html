@@ -111,7 +111,7 @@
         <header class="header-col">
           <h2 class="tit-g">휴가설정</h2>
           <div class="area-btn">
-            <a href="s105-write.html" class="btn- btn-green ml-a"> <i class="fa fa-street-view"></i> 궤적보기</a>
+            <a href="s105-write.html" class="btn- btn-blue ml-a"> <i class="fa fa-check"></i> 저장</a>
           </div>
         </header>
         <div class="contents">
@@ -130,6 +130,7 @@
                     <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="보고 종료일">
                     <i class="fa fa-calendar"></i>
                   </div>
+                  <a href="javascript:;" class="btn- btn-search mr-5" maxlength="10" id="btnSearch" name="btnSearch">휴가설정</a>
   
                   <div class="c-select">
                     <label for="control" class="blind">관할청</label>
@@ -182,6 +183,26 @@
                                   <td><input type="checkbox" class="checkbox-"></td>
                                   <td>오다다</td>
                               </tr>
+                              <tr class="on">
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>오다다</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>오다다</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>오다다</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>오다다</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" class="checkbox-"></td>
+                                  <td>오다다</td>
+                              </tr>
                               
                               
                           </tbody>
@@ -193,6 +214,35 @@
                 <div class="col-right" style="width: 79%;">
                     <!-- calendar -->
                     <div class="calendar-">
+                        <div class="row- row-month">
+                            <div class="c-select">
+                                    
+                                <select id="attach" name="attach" class="sel-" data-width="90">
+                                  <option data-tokens="">2020년</option>
+                                  <option data-tokens="">2019년</option>
+                                  <option data-tokens="">2018년</option>
+                                  <option data-tokens="">2017년</option>
+                                  <option data-tokens="">2016년</option>
+                                </select>
+                              </div>
+                              <div class="c-select">
+                                    
+                                <select id="attach" name="attach" class="sel-" data-width="70">
+                                  <option data-tokens="">1월</option>
+                                  <option data-tokens="">2월</option>
+                                  <option data-tokens="">3월</option>
+                                  <option data-tokens="">4월</option>
+                                  <option data-tokens="" selected>5월</option>
+                                  <option data-tokens="">6월</option>
+                                  <option data-tokens="">7월</option>
+                                  <option data-tokens="">8월</option>
+                                  <option data-tokens="">9월</option>
+                                  <option data-tokens="">10월</option>
+                                  <option data-tokens="">11월</option>
+                                  <option data-tokens="">12월</option>
+                                </select>
+                              </div>
+                        </div>
                         <ul class="row- row-week">
                             <li>일</li>
                             <li>월</li>
@@ -311,6 +361,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>6</h3>
@@ -320,6 +383,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>7</h3>
@@ -329,6 +405,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>8</h3>
@@ -338,6 +427,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>9</h3>
@@ -347,6 +449,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li class="today" data-toggle="modal" data-target="#break">
                                     <h3>10</h3>
@@ -356,6 +471,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>11</h3>
@@ -365,6 +493,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                             </ol>
                             <ol class="row-">
@@ -376,6 +517,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>13</h3>
@@ -385,6 +539,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>14</h3>
@@ -394,6 +561,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>15</h3>
@@ -403,6 +583,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>16</h3>
@@ -412,6 +605,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>17</h3>
@@ -421,6 +627,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>18</h3>
@@ -430,6 +649,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                             </ol>
                             <ol class="row-">
@@ -441,6 +673,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>20</h3>
@@ -450,6 +695,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>21</h3>
@@ -459,6 +717,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>22</h3>
@@ -468,6 +739,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>23</h3>
@@ -477,6 +761,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>24</h3>
@@ -486,6 +783,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>25</h3>
@@ -495,6 +805,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                             </ol>
                             <ol class="row-">
@@ -506,6 +829,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>28</h3>
@@ -515,6 +851,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>29</h3>
@@ -524,6 +873,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>30</h3>
@@ -533,6 +895,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li data-toggle="modal" data-target="#break">
                                     <h3>31</h3>
@@ -542,6 +917,19 @@
                                         <dt>퇴근</dt>
                                         <dd>16:30</dd>
                                     </dl>
+                                    <select id="attach" name="attach" class="sel-" data-width="100%" title="휴가선택">
+                                        <optgroup label="휴가구분">
+                                            <option data-tokens="">유급휴가</option>
+                                            <option data-tokens="">무급휴가</option>
+                                            <option data-tokens="">대체휴가</option>
+                                        </optgroup>
+                                        <optgroup label="추가구분">
+                                            <option data-tokens="">삭제</option>
+                                            <option data-tokens="">휴무</option>
+                                            <option data-tokens="">병가</option>
+                                            <option data-tokens="">기타</option>
+                                        </optgroup>
+                                      </select>
                                 </li>
                                 <li>
                                     

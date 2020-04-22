@@ -488,6 +488,7 @@ textarea {
 
 .side-menu > li ul.collapse a:hover, .side-menu > li ul.collapse .on a {
   background: rgba(0, 0, 0, 0.1);
+  background: rgba(61, 128, 207, 0.1);
   color: #3d80cf;
   font-weight: bold;
 }
@@ -729,6 +730,10 @@ section header {
 .table {
   position: relative;
   border-collapse: collapse;
+}
+
+.table .on td {
+  background: rgba(61, 128, 207, 0.1);
 }
 
 .table.curser-none tr:hover {
@@ -2076,6 +2081,20 @@ section header {
   border-right: none;
 }
 
+.calendar- .row-month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+.calendar- .row-month .c-select {
+  padding: 0 5px;
+}
+
 .calendar- .row-week {
   color: #fff;
 }
@@ -2129,6 +2148,7 @@ section header {
 .calendar- .area-calendar h3 {
   position: relative;
   padding: 3px 0 2px;
+  margin-bottom: 5px;
   background: #e4e4e4;
   border-radius: 3px;
   font-size: .9rem;
@@ -2142,7 +2162,9 @@ section header {
       flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 5px 0 0;
+  font-size: .85rem;
+  line-height: 1.1;
 }
 
 .calendar- .area-calendar dl dt {
@@ -2151,5 +2173,10 @@ section header {
 
 .calendar- .area-calendar dl dd {
   width: 60%;
+}
+
+.calendar- .area-calendar .sel- {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 /*# sourceMappingURL=comm.css.map */

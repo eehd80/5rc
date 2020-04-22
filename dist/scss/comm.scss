@@ -379,6 +379,7 @@ textarea {
             }
             &.collapse a:hover, &.collapse .on a{
                 background: rgba(0,0,0,.1);
+                background: rgba($blue, .1);
                 color: $blue;font-weight: bold;
             }
         }
@@ -566,6 +567,10 @@ section header {
     position: relative;
     border-collapse: collapse; 
     // border-bottom: 1px solid $blue;
+
+    .on {
+        td {background: rgba($blue, .1);}
+    }
 
     &.curser-none {
         tr:hover {
@@ -1647,6 +1652,13 @@ section header {
             }
         }
     }
+    .row-month {
+        display: flex; justify-content: center;
+        margin-bottom: 10px;
+        .c-select {
+            padding: 0 5px;
+        }
+    }
     .row-week {
         color: #fff; 
         li {
@@ -1682,7 +1694,7 @@ section header {
         
         h3 {
             position: relative;
-            padding: 3px 0 2px;
+            padding: 3px 0 2px; margin-bottom: 5px;
             background: rgba(228, 228, 228, 1);
             border-radius: 3px;
             font-size: .9rem; 
@@ -1695,13 +1707,17 @@ section header {
         }
         dl {
             display: flex; flex-wrap: wrap;
-            width: 90%;margin: 0 auto;padding: 5px 0;
+            width: 90%;margin: 0 auto;padding: 5px 0 0;
+            font-size: .85rem; line-height: 1.1;
             dt {
                 width: 40%;
             }
             dd {
                 width: 60%;
             }
+        }
+        .sel- {
+            transform: scale(.9);
         }
     }
 }
