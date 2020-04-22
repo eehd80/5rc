@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
+  line-height: 1.5;
 }
 
 a {
@@ -185,19 +186,21 @@ a:hover {
 
 .link-s {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 3px;
   background: #f8f8f8;
   border: 1px solid #c7c7c7;
   border-radius: 3px;
+  padding: 4px 10px 2px;
   vertical-align: middle;
+  background: #fff;
+  border: 1px solid #c7c7c7;
+  color: #3a4a5d;
+  font-size: 0.9em;
 }
 
 .link-s.link-blue {
-  padding: 4px 10px 2px;
   background: rgba(111, 179, 255, 0.3);
   border: 1px solid rgba(111, 179, 255, 0.3);
-  font-size: 0.9em;
-  color: #3a4a5d;
 }
 
 .link-map {
@@ -290,6 +293,14 @@ textarea {
   left: -5px;
 }
 
+.sel-default {
+  display: inline-block;
+  height: 30px;
+  border: 1px solid #c7c7c7;
+  border-radius: 0;
+  background: #fff;
+}
+
 .sel- {
   display: inline-block;
   height: 35px;
@@ -300,7 +311,11 @@ textarea {
   vertical-align: top;
 }
 
-.sel- .dropdown-divider {
+.sel- .dropdown-header {
+  display: none;
+}
+
+.sel- li.dropdown-divider:first-child {
   display: none;
 }
 
@@ -1575,6 +1590,18 @@ section header {
      object-position: center;
 }
 
+.contents-col2 .area-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.contents-col2 .area-tit h3 {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 .contents-col2 .tbl-info {
   padding: 5px 0 0;
 }
@@ -2091,10 +2118,6 @@ section header {
   margin-bottom: 10px;
 }
 
-.calendar- .row-month .c-select {
-  padding: 0 5px;
-}
-
 .calendar- .row-week {
   color: #fff;
 }
@@ -2140,13 +2163,21 @@ section header {
   cursor: pointer;
 }
 
+.calendar- .area-calendar .row- > li:nth-child(-n+7) .dropdown-menu {
+  z-index: 10000000 !important;
+}
+
 .calendar- .area-calendar .row- > li.today h3 {
   background: #e95f71;
   color: #fff;
 }
 
-.calendar- .area-calendar h3 {
+.calendar- .area-calendar .row- .dropdown-toggle {
   position: relative;
+  z-index: 1000;
+}
+
+.calendar- .area-calendar h3 {
   padding: 3px 0 2px;
   margin-bottom: 5px;
   background: #e4e4e4;
@@ -2178,5 +2209,18 @@ section header {
 .calendar- .area-calendar .sel- {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.calendar- .sel-d {
+  border: none !important;
+}
+
+.calendar- .sel-d .dropdown-toggle {
+  background: none;
+}
+
+.calendar- .sel-d .filter-option {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=comm.css.map */
