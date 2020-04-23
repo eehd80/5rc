@@ -39,7 +39,7 @@
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                         <!-- Log out-->
                         <li class="nav-item">
-                            <a href="#" class="nav-link logout"> 비밀번호 변경 </a>
+                            <a href="pw.html" class="nav-link logout"> 비밀번호 변경 </a>
                         </li>
                         <li class="nav-item"><a href="login.html" class="nav-link logout"> 로그아웃</a>
                         </li>
@@ -140,7 +140,7 @@
               </div>
               
               <div class="contents-col2 et0">
-                <div class="col-left" style="width: 60%;">
+                <div class="col-left" style="width: 25%;">
                     <div class="area-tit">
                         <!-- <h3>메뉴등록</h3> -->
                         <a href="#" class="link-s link-blue ml-a">추가</a>
@@ -150,70 +150,83 @@
                       <div class=" tbl-scroll-wrap">
                         <div class="tbl-original mCustomScrollbar">
                           <table class="tbl-g table">
-                          <caption>메뉴키, 메뉴명, url, 부모키, C, U, D, Excel, OP, imageURL 목록입니다.</caption>
+                          <caption>권한명, 사용여부 목록입니다.</caption>
                           <colgroup>
-                              <col width="10%">
-                              <col width="15%">
+                              <col width="60%">
                               <col>
-                              <col width="10%">
-                              <col width="5%" span="3">
-                              <col width="7%">
-                              <col width="5%">
-                              <col width="15%">
                           </colgroup>
                           <thead>
                               <tr>
-                                  <th scope="col">메뉴키</th>
-                                  <th scope="col">메뉴명</th>
-                                  <th scope="col">URL</th>
-                                  <th scope="col">부모키</th>
-                                  <th scope="col">C</th>
-                                  <th scope="col">U</th>
-                                  <th scope="col">D</th>
-                                  <th scope="col">EXCEL</th>
-                                  <th scope="col">OP</th>
-                                  <th scope="col">Images URl</th>
+                                  <th scope="col">권한명</th>
+                                  <th scope="col">사용여부</th>
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>1000</td>
-                                  <td>지킴이활동</td>
-                                  <td>Work/BitStatus</td>
-                                  <td>1000</td>
+                                  <td>admin</td>
                                   <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td></td>
                               </tr>
                               <tr>
-                                  <td>1010</td>
-                                  <td>일일업무보고</td>
-                                  <td>User/Worktime_new</td>
-                                  <td>1000</td>
+                                  <td>중앙청관리자</td>
                                   <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td></td>
                               </tr>
                               <tr>
-                                  <td>1014</td>
-                                  <td>공지사항</td>
-                                  <td>Work/BitStatus</td>
-                                  <td>1000</td>
+                                  <td>지킴이</td>
                                   <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td><input id="option" type="checkbox" value=""></td>
-                                  <td></td>
                               </tr>
-                              
-                              
+                          </tbody>
+                          </table>
+                    </div>
+                  </div>
+                  <!-- //table -->
+                </div>
+                <div class="col-left" style="width: 48%;">
+                    <div class="area-tit">
+                        <!-- <h3>메뉴등록</h3> -->
+                        <a href="#" class="link-s link-blue ml-a">추가</a>
+                        <a href="#" class="link-s link-blue">삭제</a>
+                    </div>
+                    <!-- table -->
+                    <div class=" tbl-scroll-wrap">
+                        <div class="tbl-original mCustomScrollbar">
+                          <table class="tbl-g table">
+                            <colgroup>
+                                <col width="10%">
+                                <col>
+                                <col width="12%" span="5">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input id="option" type="checkbox" value=""></th>
+                                    <th scope="col">메뉴명</th>
+                                    <th scope="col">C</th>
+                                    <th scope="col">U</th>
+                                    <th scope="col">D</th>
+                                    <th scope="col">EXCEL</th>
+                                    <th scope="col">OP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td>지킴이활동</td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td>일일업무보고</td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td><input id="option" type="checkbox" value=""></td>
+                                    <td></td>
+                                </tr>
                               
                           </tbody>
                           </table>
@@ -221,13 +234,12 @@
                   </div>
                   <!-- //table -->
                 </div>
-                <div class="col-right" style="width: 39%;">
+                <div class="col-right" style="width: 25%;">
                     <!-- 일일업무보고 -->
                     <div class="area-tit">
-                        <h3>일일업무보고</h3>
+                        <!-- <h3>일일업무보고</h3> -->
                         <a href="#" class="link-s link-blue ml-a">추가</a>
                         <a href="#" class="link-s link-blue">삭제</a>
-                        <a href="#" class="link-s link-blue">저장</a>
                     </div>
                       <!-- table -->
                       <div class=" tbl-scroll-wrap">
@@ -235,36 +247,26 @@
                           <table class="tbl-g table">
                           <caption>메뉴키, 메뉴옵션키, 옵션명, 기본값 목록입니다.</caption>
                           <colgroup>
-                              <col width="20%">
-                              <col width="28%">
                               <col>
-                              <col width="20%">
+                              <col width="40%">
                           </colgroup>
                           <thead>
                               <tr>
-                                  <th scope="col">메뉴키</th>
-                                  <th scope="col">메뉴옵션키</th>
                                   <th scope="col">옵션명</th>
                                   <th scope="col">기본값</th>
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>1000</td>
-                                  <td>101001</td>
                                   <td>중앙청조회</td>
                                   <td></td>
                               </tr>
                               <tr>
-                                  <td>1000</td>
-                                  <td>101001</td>
-                                  <td>중앙청조회</td>
+                                  <td>유역청조회</td>
                                   <td></td>
                               </tr>
                               <tr>
-                                  <td>1000</td>
-                                  <td>101001</td>
-                                  <td>중앙청조회</td>
+                                  <td>대권역조회</td>
                                   <td></td>
                               </tr>
                               

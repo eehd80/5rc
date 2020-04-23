@@ -152,6 +152,9 @@ input {
         background: $bgLightblue;
         border: 1px solid $lightBlue;
     }
+    &[type=checkbox] {
+        height: auto;
+    }
 }
 textarea {
     padding: 10px;
@@ -182,6 +185,14 @@ textarea {
         position: absolute;
         top: 3px;left: 4px;
         font-size: 12px;
+    }
+}
+
+.form-pw {
+    padding: 50px;
+    label {
+        width: 120px;
+        line-height: 37px;
     }
 }
 

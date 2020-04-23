@@ -242,6 +242,10 @@ input:focus {
   border: 1px solid #1369CD;
 }
 
+input[type=checkbox] {
+  height: auto;
+}
+
 textarea {
   padding: 10px;
   border: 1px solid #c7c7c7;
@@ -280,6 +284,15 @@ textarea {
   top: 3px;
   left: 4px;
   font-size: 12px;
+}
+
+.form-pw {
+  padding: 50px;
+}
+
+.form-pw label {
+  width: 120px;
+  line-height: 37px;
 }
 
 .card-check {

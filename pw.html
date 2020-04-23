@@ -20,13 +20,12 @@
 </head>
 
 <body>
-    <div id="skipnavigation">
-      <a href="#gnb"><span>주메뉴 바로가기</span></a>
-      <a href="#main"><span>본문 바로가기</span></a>
-    </div>
-    <!-- header -->
-    <header class="header" include-html="./layer/header.html"></header>
-  
+  <div id="skipnavigation">
+    <a href="#gnb"><span>주메뉴 바로가기</span></a>
+    <a href="#main"><span>본문 바로가기</span></a>
+  </div>
+  <!-- header -->
+  <header class="header" include-html="./layer/header.html"></header>
     <!-- Side Navbar -->
     <nav class="side-navbar">
       <div class="side-navbar-wrapper">
@@ -53,7 +52,7 @@
             <li>
               <a href="#s1Dropdown" aria-expanded="false" data-toggle="collapse">
               <i class="fa fa-eye"></i>지킴이 활동 </a>
-              <ul id="s1Dropdown" class="collapse list-unstyled ">
+              <ul id="s1Dropdown" class="collapse list-unstyled">
                 <li><a href="s101.html">공지사항</a></li>
                 <li><a href="s102.html">출퇴근</a></li>
                 <li><a href="s103.html">업무보고</a></li>
@@ -63,9 +62,9 @@
               </ul>
             </li>
             <li>
-              <a href="#s2Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>통계</a>
-              <ul id="s2Dropdown" class="collapse list-unstyled show ">
-                <li class="on"><a href="s201.html">메인통계</a></li>
+              <a href="#s2Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>통계</a>
+              <ul id="s2Dropdown" class="collapse list-unstyled ">
+                <li><a href="s201.html">메인통계</a></li>
                 <li><a href="s202.html">근무현황통계</a></li>
                 <li><a href="s203.html">업무보고통계</a></li>
                 <li><a href="s204.html">월별현황</a></li>
@@ -73,10 +72,9 @@
               </ul>
             </li>
             <li>
-              <a href="#s3Dropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리
-              </a>
-              <ul id="s3Dropdown" class="collapse list-unstyled ">
-                <li><a href="s301.html">관리자</a></li>
+              <a href="#s3Dropdown" aria-expanded="true" data-toggle="collapse"> <i class="fa fa-users"></i>사용자관리</a>
+              <ul id="s3Dropdown" class="collapse list-unstyled show  ">
+                <li class="on"><a href="s301.html">관리자</a></li>
                 <li><a href="s302.html">지킴이</a></li>
                 <li><a href="s303.html">사용자별 권한관리</a></li>
               </ul>
@@ -109,60 +107,43 @@
       <div class="container-fluid">
         <!-- Page Header-->
         <header class="header-col">
-          <h2 class="tit-g">메인통계</h2>
+          <h2 class="tit-g">비밀번호 변경</h2>
           <div class="area-btn">
-            <a href="#" class="btn- btn-green"><i class="fa fa-file-excel-o"></i> 엑셀</a>
+            <a href="s301-write.html" class="btn- btn-blue"><i class="fa fa-check"></i> 저장</a>
+            <a href="#" class="btn- btn-gray">취소</a>
           </div>
         </header>
         <div class="contents">
-            <div class="table-responsive">
 
-              <div class="tbl-header clear-g">
-
-                <form class="form-inline" id="noticeList" name="noticeList">
-  
-                  <div class="input-datepicker">
-                    <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="보고 시작일">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <em class="txt-join">~</em>
-                  <div class="input-datepicker">
-                    <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="보고 종료일">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-  
-                  <div class="c-select">
-                    <label for="control" class="blind">관할청</label>
-                    <select id="control" name="control" class="sel-" data-live-search="true" data-width="fit">
-                      <option data-tokens="">관할청</option>
-                      <option data-tokens="">환경부</option>
-                      <option data-tokens="">한강유역환경청</option>
-                      <option data-tokens="">금강유역환경청</option>
-                    </select>
-                  </div>
-                  <div class="c-select">
-                    <label for="searchType" class="blind">검색구분</label>
-                    <select id="searchType" name="searchType" class="sel-" data-live-search="true" data-width="fit">
-                      <option data-tokens="전체">전체</option>
-                      <option data-tokens="이름">이름</option>
-                      <option data-tokens="단말기 번호">단말기 번호</option>
-                    </select>
-                  </div>
-  
-                  <div class="input-box">
-                    <input type="text" id="searchKey" name="searchKey" maxlength="20" placeholder="검색어를 입력해주세요."
-                      title="검색어" class="int">
-                    <i class="fa fa-times-circle form-control-clear hidden"></i>
-                  </div>
-                  <a href="javascript:;" class="btn- btn-search" maxlength="10" id="btnSearch" name="btnSearch">검색</a>
-                </form>
-  
-              </div>
-              
-              
-
+          <div class="contents-col2 et0">
+            <div class="col- w100">
+              <form action="" class="form-pw">
+                <fieldset>
+                    <legend>비밃번호 변경</legend>
+                  
+                    <div class="wrap-input-box">
+                      <div class="input-box mb-3">
+                          <label for="pw">현재 비밀번호</label>
+                          <input type="password" id="pw" name="pw" minlength="6" maxlength="12" class="int">
+                          <i class="fa fa-times-circle form-control-clear hidden"></i>
+                      </div>
+                      <div class="input-box">
+                          <label for="pw">새 비밀번호</label>
+                          <input type="password" id="pw" name="pw" minlength="6" maxlength="12" class="int">
+                          <i class="fa fa-times-circle form-control-clear hidden"></i>
+                      </div>
+                      <div class="input-box">
+                          <label for="pw">새 비밀번호 확인</label>
+                          <input type="password" id="pw" name="pw" minlength="6" maxlength="12" class="int">
+                          <i class="fa fa-times-circle form-control-clear hidden"></i>
+                      </div>
+                    </div>
+                </fieldset>
+            </form>
             </div>
-        </div>
+          </div>
+          
+      </div>
       </div>
     </section>
   </div>
