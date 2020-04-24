@@ -631,10 +631,6 @@ nav.navbar .breadcrumb {
           box-shadow: none;
 }
 
-.sec-login img {
-  max-width: 16rem;
-}
-
 #main.page {
   top: 76px;
   height: calc(100% - 80px);
@@ -2235,5 +2231,110 @@ section header {
 .calendar- .sel-d .filter-option {
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.cont-login {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.cont-login .sec-login {
+  position: relative;
+  width: 70%;
+  height: 800px;
+  margin: auto;
+}
+
+.cont-login .area-blue {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #3d80cf;
+}
+
+.cont-login .login-tit {
+  float: left;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 50px;
+  background: url(../../images/login-text.jpg) 50% 100% no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+.cont-login .col-left {
+  float: left;
+  width: 35%;
+  padding-top: 120px;
+}
+
+.cont-login .col-right {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+.cont-login .col-right img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.cont-login .form-validate button {
+  width: 100%;
+  height: 50px;
+}
+
+.cont-login .form-control {
+  height: 50px;
+  border-radius: 0;
+  font-size: 1.3rem;
+}
+
+.cont-login .btn-blue {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.cont-login .find-info {
+  margin-top: 10px;
+}
+
+.cont-login .i-checks {
+  float: left;
+  width: auto;
+}
+
+.cont-login .i-checks label {
+  color: #000;
+  white-space: nowrap;
+  letter-spacing: -.5px;
+}
+
+.cont-login .i-checks label span {
+  margin-left: 0;
+}
+
+.cont-login .i-checks .i-checks input.form-control-custom + label {
+  padding: 0 0 0 30px;
+}
+
+.cont-login .i-checks input.form-control-custom + label::before {
+  top: 4px;
+}
+
+.cont-login .link-txt {
+  float: right;
+  color: #8e8e8e;
 }
 /*# sourceMappingURL=comm.css.map */

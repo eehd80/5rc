@@ -492,14 +492,6 @@ nav.navbar {
     box-shadow: none;
 }
 
-
-// login
-.sec-login {
-    img {
-        max-width: 16rem;
-    }
-}
-
 // main
 #main.page{
     top: 76px;
@@ -1764,4 +1756,97 @@ section header {
             font-size: 1.3rem;font-weight: bold;
         }
     }
+}
+
+
+// login
+.cont-login {
+    position: relative;
+    display: flex; justify-content: center;
+    flex-direction: column;
+    padding: 0; margin: 0;
+    // background: $blue;
+//    &::before {
+//        position: absolute;top: 0;left: 0;right: 0;
+//        content: '';
+//        height: 100%;
+//         background: url(../../images/724.jpg) 0 0 no-repeat;
+//         background-size: cover;
+//         opacity: .4;
+//    }
+
+    .sec-login {
+        position: relative;
+        // display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+        width: 70%;height: 800px;
+        margin: auto;
+        
+    }
+    .area-blue {
+        flex: 1;
+        background: $blue;
+    }
+
+    .login-tit {
+        float: left;
+        width: 100%;height: 220px;margin-bottom: 50px;
+        background: url(../../images/login-text.jpg) 50% 100% no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+    }
+
+    .col-left {
+        float: left;
+        width: 35%;padding-top: 120px;
+    }
+    .col-right {
+        float: right;
+        width: 50%;
+        text-align: right;
+        img {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+
+    .form-validate button {
+        width: 100%; height: 50px;
+    }
+    .form-control {
+        height: 50px;
+        border-radius: 0;
+        font-size: 1.3rem;
+    }
+
+    .btn-blue {
+        font-size: 1.05rem; font-weight: bold;
+    }
+
+    .find-info {
+        margin-top: 10px;
+    }
+    
+    .i-checks {
+        float: left;
+        width: auto;
+        label {
+            color: #000;
+            white-space: nowrap; letter-spacing: -.5px;
+            span {
+                margin-left: 0;
+            }
+        }
+        .i-checks input.form-control-custom + label {
+            padding: 0 0 0 30px;
+        }
+        input.form-control-custom + label::before {
+            top: 4px;
+        }
+    }
+
+    .link-txt {
+        float: right;
+        color: #8e8e8e;
+    }
+
 }
