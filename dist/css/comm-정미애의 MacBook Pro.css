@@ -111,12 +111,6 @@ a:hover {
   width: 70%;
 }
 
-.flex-auto {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 1 auto !important;
-          flex: 0 1 auto !important;
-}
-
 .img-object {
   overflow: hidden;
   position: relative;
@@ -371,12 +365,11 @@ textarea {
   height: 35px;
   background: #f8f8f8;
   border: none;
-  padding: 0.4rem .75rem;
+  padding: .5rem .75rem;
 }
 
 .bs-searchbox .form-control {
   height: 30px;
-  padding: .25rem .75rem;
 }
 
 #skipnavigation a {
@@ -582,7 +575,6 @@ nav.navbar {
   height: 80px;
   background: url(../../images/bg-header.jpg) 50% 90% no-repeat;
   background-size: cover;
-  border-bottom: 1px solid #eee;
   padding: 1rem 2.7% .5rem;
 }
 
@@ -641,7 +633,6 @@ nav.navbar .breadcrumb {
 }
 
 #main.page {
-  overflow: visible;
   top: 76px;
   height: calc(100% - 80px);
   min-height: 0;
@@ -651,12 +642,9 @@ nav.navbar .breadcrumb {
 
 #main.page section {
   height: 100%;
-  overflow-x: auto;
 }
 
 #main.page .container-fluid {
-  width: 100%;
-  min-width: 1060px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -670,10 +658,6 @@ nav.navbar .breadcrumb {
 section header {
   padding-top: 2rem;
   padding-bottom: 0;
-}
-
-.sidenav-header-inner {
-  width: 100%;
 }
 
 .sidenav-header-inner img {
@@ -1535,6 +1519,7 @@ section header {
 }
 
 .bg-card {
+  overflow: hidden;
   padding: 0;
   border: 10px solid #F5F7FA;
   border-radius: 5px;
@@ -1587,6 +1572,7 @@ section header {
 }
 
 .contents-col2 > [class^=col-] {
+  overflow: hidden;
   padding: 0;
   border: 10px solid #F5F7FA;
   border-radius: 5px;
@@ -1850,6 +1836,7 @@ section header {
 
 .area-map {
   position: relative;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -1950,6 +1937,7 @@ section header {
 
 .contents-pop .area-map {
   position: relative;
+  overflow: hidden;
 }
 
 .contents-pop .tbl-header {
@@ -2100,13 +2088,6 @@ section header {
   }
 }
 
-.sec-calendar {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 1 auto !important;
-          flex: 0 1 auto !important;
-  height: 740px;
-}
-
 .calendar- {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2162,7 +2143,6 @@ section header {
 }
 
 .calendar- .row-week li:last-child {
-  border-right: none;
   background: #3d80cf;
 }
 
@@ -2190,14 +2170,11 @@ section header {
 .calendar- .area-calendar .row- > li {
   padding: 5px 3px;
   border-right: 1px solid rgba(199, 199, 199, 0.5);
+  cursor: pointer;
 }
 
 .calendar- .area-calendar .row- > li:nth-child(-n+7) .dropdown-menu {
   z-index: 10000000 !important;
-}
-
-.calendar- .area-calendar .row- > li:last-child {
-  border-right: none;
 }
 
 .calendar- .area-calendar .row- > li.today h3 {
@@ -2361,4 +2338,4 @@ section header {
   float: right;
   color: #8e8e8e;
 }
-/*# sourceMappingURL=comm.css.map */
+/*# sourceMappingURL=comm-정미애의 MacBook Pro.css.map */
