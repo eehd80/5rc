@@ -1010,7 +1010,7 @@ section header {
     }
     .form-inline {
         width: 100%;
-      display: flex; flex-wrap: nowrap;
+      display: flex; flex-wrap: wrap;
       > div {
           margin-right: 5px;
       }
