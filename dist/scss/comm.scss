@@ -506,7 +506,7 @@ nav.navbar {
     background: #fff;
     section {
         height: 100%;
-        overflow-x: auto;
+        // overflow-x: auto;
     }
     .container-fluid {
         width: 100%;
@@ -1866,4 +1866,8 @@ section header {
         color: #8e8e8e;
     }
 
+}
+
+#grid_json {
+    margin: 10px 0 0 !important;
 }

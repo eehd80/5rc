@@ -651,7 +651,6 @@ nav.navbar .breadcrumb {
 
 #main.page section {
   height: 100%;
-  overflow-x: auto;
 }
 
 #main.page .container-fluid {
@@ -2360,5 +2359,9 @@ section header {
 .cont-login .link-txt {
   float: right;
   color: #8e8e8e;
+}
+
+#grid_json {
+  margin: 10px 0 0 !important;
 }
 /*# sourceMappingURL=comm.css.map */
