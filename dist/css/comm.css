@@ -644,7 +644,7 @@ nav.navbar .breadcrumb {
   overflow: visible;
   top: 76px;
   height: calc(100% - 80px);
-  min-height: 0;
+  min-height: 80vh;
   padding-bottom: 0;
   background: #fff;
 }
