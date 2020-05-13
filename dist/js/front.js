@@ -251,14 +251,14 @@ $(document).ready(function () {
     // selectpicker
     // ------------------------------------------------------ //
 
-    $('.sel-').selectpicker({
-            language: {
-                noResults: function (params) {
-                    return "No results ... or something else";
-                }
-            }
-        }
-    );
+    // $('.sel-').selectpicker({
+    //         language: {
+    //             noResults: function (params) {
+    //                 return "No results ... or something else";
+    //             }
+    //         }
+    //     }
+    // );
 
     // ------------------------------------------------------ //
     // map-pop
@@ -274,8 +274,5 @@ $(document).ready(function () {
         })
     })
     
-
-
-
 
 });
