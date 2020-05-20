@@ -133,7 +133,7 @@ a {
 input[type=password] {font-family: 'Malgun Gothic';}
 input {
     display: inline-block;
-    height: 37px;
+    height: 35px;
     margin: 0;
     padding: 1px 0 0 10px;
     // border: 1px solid $border-color;
@@ -219,7 +219,7 @@ textarea {
     margin: 0;
     padding: 1px 0 0 10px;
     // border: 1px solid $border-color;
-    // border-radius: 2px;
+    border-radius: 0;
     font-size: 1rem;
     color: #333;
     // line-height: 35px;
@@ -232,6 +232,7 @@ textarea {
     }
     
 }
+
 .bootstrap-select .dropdown-menu li a {
     padding: .3rem 1rem;
 }
@@ -263,7 +264,7 @@ textarea {
     padding: 0;
 }
 .bootstrap-select>.dropdown-toggle {
-    height:35px;
+    height:100%;
     background: $bgLightgray;
     border: none;
     // border: 1px solid ;
@@ -939,7 +940,7 @@ section header {
 .input-datepicker {
     position: relative;
     // width: 191px;
-    height: 37px; 
+    height: 35px; 
     border: 1px solid $border-color;
     // border-radius: 5px;
     background: $bgLightgray;
@@ -1220,7 +1221,7 @@ section header {
 // }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 88%; height: 37px;
+    width: 88%; height: 35px;
     border: 1px solid $border-color;
 }
 
@@ -1388,10 +1389,10 @@ section header {
 
 
 
-.bootstrap-select > .dropdown-toggle {
-    background: #fff;
-    // height: 33px;
-}
+// .bootstrap-select > .dropdown-toggle {
+//     background: $bgLightgray;
+//     height: 35px;
+// }
 
 // icon-map
 .point-map {

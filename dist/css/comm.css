@@ -231,7 +231,7 @@ input[type=password] {
 
 input {
   display: inline-block;
-  height: 37px;
+  height: 35px;
   margin: 0;
   padding: 1px 0 0 10px;
   font-size: 1rem;
@@ -325,6 +325,7 @@ textarea {
   height: 35px;
   margin: 0;
   padding: 1px 0 0 10px;
+  border-radius: 0;
   font-size: 1rem;
   color: #333;
   vertical-align: top;
@@ -368,7 +369,7 @@ textarea {
 }
 
 .bootstrap-select > .dropdown-toggle {
-  height: 35px;
+  height: 100%;
   background: #f8f8f8;
   border: none;
   padding: 0.4rem .75rem;
@@ -1219,7 +1220,7 @@ section header {
 
 .input-datepicker {
   position: relative;
-  height: 37px;
+  height: 35px;
   border: 1px solid #c7c7c7;
   background: #f8f8f8;
   line-height: 37px;
@@ -1529,7 +1530,7 @@ section header {
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: 88%;
-  height: 37px;
+  height: 35px;
   border: 1px solid #c7c7c7;
 }
 
@@ -1743,10 +1744,6 @@ section header {
 
 .contents-col2.et2 dl dd {
   width: 50%;
-}
-
-.bootstrap-select > .dropdown-toggle {
-  background: #fff;
 }
 
 .point-map {

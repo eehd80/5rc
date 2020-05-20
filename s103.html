@@ -126,19 +126,15 @@
                   <input id="dataPicker" class="inp-txt" name="datePicker" type="text" value="2020-04-10" title="업무보고 일자">
                   <i class="fa fa-calendar"></i>
                 </div>
-
+                
                 <div class="c-select">
-                  <label for="commute" class="blind">출퇴근</label>    
-                  <select id="commute" name="searchType" class="sel-" data-live-search="true" data-width="fit">
-                    <option data-tokens="출근">출근</option>
-                    <option data-tokens="퇴근">퇴근</option>
-                    <option data-tokens="계도">계도</option>
-                    <option data-tokens="정화활동">정화활동</option>
-                    <option data-tokens="주민교육/홍보">주민교육/홍보</option>
-                    <option data-tokens="회의참석">회의참석</option>
-                    <option data-tokens="순찰">순찰</option>
-                    <option data-tokens="특성화사업">특성화사업</option>
-                  </select>
+                  <label for="bizcode" class="blind">업무구분</label>    
+                  <select id="bizcode" name="bizcode" class="sel- selectpicker" data-width="fit" multiple title="업무구분">
+
+                  <option value="0001" selected>출근</option>
+                  <option value="0002">퇴근</option>
+                  <option value="0202">불법어로,낚시행위</option>
+                  <option value="0203">불법 쓰레기투기,소각</option><option value="0205">기타수질오염행위</option><option value="0301">정화활동</option><option value="0401">현장체험활동</option><option value="0402">주민교육홍보</option><option value="0404">생태탐사 참가</option><option value="0501">회의참석</option><option value="0601">순찰</option><option value="0701">특성화사업</option></select>
                 </div>
 
                 <div class="c-select">
